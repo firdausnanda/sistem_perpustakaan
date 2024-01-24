@@ -21,7 +21,7 @@ Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 Auth::routes();
 
 // Admin Pages
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admin']], function () {
 
     // Dashboard
     Route::get('', [DashboardController::class, 'index'])->name('index');
