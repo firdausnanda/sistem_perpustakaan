@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EbookController;
 use App\Http\Controllers\JurnalController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LandingController;
 use App\Models\Jurnal;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +46,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::post('/update', [JurnalController::class, 'update'])->name('update');
         Route::get('/create', [JurnalController::class, 'create'])->name('create');
         Route::get('/{id}', [JurnalController::class, 'edit'])->name('edit');
+    });
+    
+    // Kategori
+    Route::group(['prefix' => 'kategori', 'as' => 'kategori.'], function () {
+        Route::get('', [KategoriController::class, 'index'])->name('index');
+        Route::post('', [KategoriController::class, 'store'])->name('store');
+        Route::put('', [KategoriController::class, 'update'])->name('update');
     });
 
 });

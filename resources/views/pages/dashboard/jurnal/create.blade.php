@@ -46,7 +46,8 @@
                                                     <select name="kategori" class="form-select">
                                                         <option value="">-- Pilih Kategori --</option>
                                                         @foreach ($kategori as $i)
-                                                            <option value="{{ $i->id }}">{{ $i->nama_kategori }}</option>
+                                                            <option value="{{ $i->id }}">{{ $i->nama_kategori }}
+                                                            </option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -92,8 +93,8 @@
                                         </div>
                                         <div class="col-lg-9">
                                             <label for="file" class="form-label">File</label>
-                                            <input type="file" class="upload-file" name="file" data-max-file-size="2M"
-                                                data-allowed-file-extensions="pdf" id="file"
+                                            <input type="file" class="upload-file" name="file"
+                                                data-max-file-size="2M" data-allowed-file-extensions="pdf" id="file"
                                                 data-errors-position="outside" />
                                         </div>
 
@@ -112,6 +113,38 @@
 
         </div>
     </section>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="modal-kategori" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Tambah Kategori
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="form-kategori">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="form-label" for="nama_kategori">Nama Kategori</label>
+                                <input type="text" class="form-control" name="nama_kategori"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Batalkan
+                        </button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('script')
@@ -174,6 +207,40 @@
                     },
                 });
 
+            });
+
+            // Kategori
+            $('#tambah-kategori').click(function (e) { 
+                e.preventDefault();
+                $('#modal-kategori').modal('show')
+            });
+
+            // Submit Kategori
+            $('#form-kategori').submit(function (e) { 
+                e.preventDefault();
+
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('admin.kategori.store') }}",
+                    data: $(this).serialize(),
+                    dataType: "JSON",
+                    beforeSend: function() {
+                        $.LoadingOverlay('show');
+                    },
+                    success: function (response) {
+                        $.LoadingOverlay('hide');
+                        if (response.meta.status == "success") {
+                            Swal.fire({
+                                icon: 'success',
+                                title: "Sukses!",
+                                text: response.meta.message,
+                            }).then((result) => {
+                                location.reload();
+                            });
+                        }
+                    }
+                });
+                
             });
 
         });
