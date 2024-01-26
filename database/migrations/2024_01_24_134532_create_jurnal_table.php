@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('link')->nullable();
             $table->string('gambar')->nullable();
             $table->string('subject')->nullable();
+            $table->string('file')->nullable();
             $table->enum('akses', [1, 2])->default(1);
             $table->timestamps();
         });

@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="pagetitle">
-        <h1>E-Book</h1>
+        <h1>Journal</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active">E-Book</li>
+                <li class="breadcrumb-item active">Journal</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -24,10 +24,10 @@
                         <div class="card recent-sales overflow-auto">
 
                             <div class="card-body">
-                                <h5 class="card-title">E-Book</h5>
+                                <h5 class="card-title">Journal</h5>
 
                                 <div class="table-responsive">
-                                    <table id="table-ebook" class="table w-100">
+                                    <table id="table-jurnal" class="table w-100">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -57,9 +57,9 @@
         $(document).ready(function() {
 
             // Init Datatable
-            var table = $('#table-ebook').DataTable({
+            var table = $('#table-jurnal').DataTable({
                 ajax: {
-                    url: "{{ route('admin.ebook.index') }}",
+                    url: "{{ route('admin.jurnal.index') }}",
                     type: "GET"
                 },
                 lengthChange: false,
@@ -68,7 +68,7 @@
                     text: 'Tambah Data',
                     className: 'btn btn-primary btn-sm btn-tambah',
                     action: function(e, dt, node, config) {
-                        location.href = "{{ route('admin.ebook.create') }}"
+                        location.href = "{{ route('admin.jurnal.create') }}"
                     }
                 }],
                 columnDefs: [{
@@ -106,19 +106,19 @@
                     },
                 ],
                 initComplete: function() {
-                    $('#table-ebook').DataTable().buttons().container().appendTo(
-                        '#table-ebook_wrapper .col-md-6:eq(0)');
+                    $('#table-jurnal').DataTable().buttons().container().appendTo(
+                        '#table-jurnal_wrapper .col-md-6:eq(0)');
                     $('.btn-tambah').removeClass("btn-secondary");
                 }
             });
 
             // Edit
-            $('#table-ebook tbody').on('click', '.btn-edit', function(event) {
+            $('#table-jurnal tbody').on('click', '.btn-edit', function(event) {
                 event.preventDefault()
 
                 var data = table.row($(this).parents('tr')).data();
                 
-                var url = "{{ route('admin.ebook.edit', ':id') }}"
+                var url = "{{ route('admin.jurnal.edit', ':id') }}"
                 var link = url.replace(':id', data.id)
                 
                 location.href = link

@@ -4,21 +4,21 @@
       <ul class="sidebar-nav" id="sidebar-nav">
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="index.html">
+              <a class="nav-link {{ request()->routeIs('admin.index') ? '' : 'collapsed' }}" href="{{ route('admin.index') }}">
                   <i class="bi bi-grid"></i>
                   <span>Dashboard</span>
               </a>
           </li><!-- End Dashboard Nav -->
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="index.html">
+              <a class="nav-link {{ request()->routeIs('admin.ebook.*') ? '' : 'collapsed' }}" href="{{ route('admin.ebook.index') }}">
                   <i class="fa-solid fa-book"></i>
                   <span>E Book</span>
               </a>
           </li><!-- End Dashboard Nav -->
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="index.html">
+              <a class="nav-link {{ request()->routeIs('admin.jurnal.*') ? '' : 'collapsed' }}" href="{{ route('admin.jurnal.index') }}">
                   <i class="fa-solid fa-book-journal-whills"></i>
                   <span>Jurnal</span>
               </a>

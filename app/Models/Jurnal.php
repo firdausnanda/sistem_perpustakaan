@@ -22,6 +22,7 @@ class Jurnal extends Model
         'link',
         'gambar',
         'subject',
+        'file',
         'akses',
     ];
 }

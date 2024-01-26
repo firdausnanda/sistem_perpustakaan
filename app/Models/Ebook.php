@@ -22,6 +22,7 @@ class Ebook extends Model
         'link',
         'gambar',
         'subject',
+        'file',
         'akses',
     ];
 }
