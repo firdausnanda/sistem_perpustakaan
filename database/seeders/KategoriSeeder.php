@@ -14,11 +14,11 @@ class KategoriSeeder extends Seeder
     public function run(): void
     {
         Kategori::create([
-            'nama_kategori' => 'Anatomi'
+            'nama_kategori' => 'E-Book'
         ]);
 
         Kategori::create([
-            'nama_kategori' => 'Patologi'
+            'nama_kategori' => 'Jurnal'
         ]);
     }
 }

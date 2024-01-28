@@ -13,19 +13,25 @@ class EbookSeeder extends Seeder
      */
     public function run(): void
     {
-        Ebook::create([
-            'id_kategori' => '1',
-            'judul' => 'Ebook Keperawatan',
-            'penulis' => 'nn',
-            'abstrak' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint, rerum possimus totam vitae mollitia iure, blanditiis quis eaque provident, aliquam aperiam ex unde fuga quasi voluptatibus eum maiores voluptatem?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint, rerum possimus totam vitae mollitia iure, blanditiis quis eaque provident, aliquam aperiam ex unde fuga quasi voluptatibus eum maiores voluptatem?',
-            'keterangan' => '',
-            'tahun' => '2023',
-            'total_halaman' => '100',
-            'link' => '',
-            'gambar' => '',
-            'subject' => '',
-            'akses' => 1,
-        ]);
+        Ebook::truncate();
+
+        $json = file_get_contents(public_path('json/ebook.json'));
+        $ebook = json_decode($json, true);
+
+        foreach ($ebook as $w) {
+            Ebook::create([
+                'id_kategori' => $w['id_kategori'],
+                'judul' => $w['judul'],
+                'penulis' => $w['judul'],
+                'abstrak' => $w['abstrak'],
+                'keterangan' => $w['keterangan'],
+                'tahun' => $w['tahun'],
+                'total_halaman' => $w['total_halaman'],
+                'link' => $w['link'],
+                'gambar' => $w['gambar'],
+                'subject' => $w['subject'],
+                'akses' => $w['akses'],
+            ]);
+        }
     }
 }
