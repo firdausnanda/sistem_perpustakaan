@@ -61,7 +61,8 @@
           <li class="nav-heading">Monitoring</li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link {{ request()->routeIs('admin.activity-log.*') ? '' : 'collapsed' }}"
+                  href="{{ route('admin.activity-log.index') }}">
                   <i class="fa-solid fa-list-check"></i>
                   <span>Riwayat Aktivitas</span>
               </a>
