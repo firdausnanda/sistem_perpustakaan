@@ -76,7 +76,7 @@
           </li><!-- End Dashboard Nav -->
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link collapsed" href="{{ url('/admin/log-viewer') }}">
                   <i class="fa-solid fa-bug"></i>
                   <span>Error Log</span>
               </a>
