@@ -78,6 +78,7 @@ class JurnalController extends Controller
                 'tahun' => $request->tahun,
                 'total_halaman' => $request->total_halaman,
                 'akses' => $request->akses,
+                'link' => $request->link,
                 'gambar' => $fileNameFoto,
                 'file' => $fileNameFile,
             ]);
@@ -174,6 +175,7 @@ class JurnalController extends Controller
                 'keterangan' => $request->keterangan,
                 'tahun' => $request->tahun,
                 'total_halaman' => $request->total_halaman,
+                'link' => $request->link,
                 'akses' => $request->akses,
                 'gambar' => $fileNameFoto,
                 'file' => $fileNameFile,
