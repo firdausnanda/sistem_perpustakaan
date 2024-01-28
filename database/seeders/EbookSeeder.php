@@ -17,7 +17,8 @@ class EbookSeeder extends Seeder
             'id_kategori' => '1',
             'judul' => 'Ebook Keperawatan',
             'penulis' => 'nn',
-            'abstrak' => '',
+            'abstrak' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint, rerum possimus totam vitae mollitia iure, blanditiis quis eaque provident, aliquam aperiam ex unde fuga quasi voluptatibus eum maiores voluptatem?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint, rerum possimus totam vitae mollitia iure, blanditiis quis eaque provident, aliquam aperiam ex unde fuga quasi voluptatibus eum maiores voluptatem?',
             'keterangan' => '',
             'tahun' => '2023',
             'total_halaman' => '100',

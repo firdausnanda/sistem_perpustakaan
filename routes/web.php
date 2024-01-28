@@ -9,6 +9,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
+use App\Http\Controllers\User\EbookController as UserEbookController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -84,6 +85,11 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['role:mahasi
 
     // Dashboard
     Route::get('', [UserDashboardController::class, 'index'])->name('index');
+
+    // Ebook
+    Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {
+        Route::get('', [UserEbookController::class, 'index'])->name('index');
+    });
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

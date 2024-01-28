@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('id_kategori')->nullable();
             $table->string('judul');
             $table->string('penulis');
-            $table->string('abstrak')->nullable();
-            $table->string('keterangan')->nullable();
+            $table->text('abstrak')->nullable();
+            $table->text('keterangan')->nullable();
             $table->string('tahun')->nullable();
             $table->string('total_halaman')->nullable();
             $table->string('link')->nullable();
