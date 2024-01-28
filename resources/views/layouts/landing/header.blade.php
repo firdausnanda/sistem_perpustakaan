@@ -51,12 +51,13 @@
                   </li>
                   <li><a href="index.html#services">Fasilitas</a></li>
                   <li><a href="index.html#contact">Contact</a></li>
+                  <li><a href="index.html#contact">Usul Buku</a></li>
               </ul>
 
               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav><!-- End Nav Menu -->
 
-          <a class="btn-getstarted fw-bold" href="index.html#about">Usul Buku</a>
+          <a class="btn-getstarted fw-bold" href="{{ route('login') }}">Login</a>
 
       </div>
   </header><!-- End Header -->

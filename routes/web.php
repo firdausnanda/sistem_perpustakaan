@@ -72,7 +72,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::put('', [IpController::class, 'update'])->name('update');
     });
 
-    // IP
+    // Activity Log
     Route::group(['prefix' => 'activity-log', 'as' => 'activity-log.'], function () {
         Route::get('', [ActivityLogController::class, 'index'])->name('index');
     });

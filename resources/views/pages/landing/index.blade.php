@@ -15,7 +15,7 @@
                         untuk mengeksplorasi dunia literatur</p>
                 </div>
                 <div class="col-lg-5">
-                    <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <form action="{{ route('login') }}" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
                         <input type="text" class="form-control" placeholder="Tuliskan kata kunci">
                         <input type="submit" class="btn btn-primary" value="Cari">
                     </form>
@@ -43,9 +43,7 @@
                         <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">Katalog</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi sint
-                                occaecati cupiditate non provident</p>
+                            <p class="description">Daftar atau direktori yang memuat informasi buku perpustakaan ITSK Soepraoen</p>
                         </div>
                     </div>
                 </div>
@@ -56,9 +54,7 @@
                         <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">Repository</a></h4>
-                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea
-                                commodo consequat tarad limino ata</p>
+                            <p class="description">Kumpulan jenis materi koleksi perpustakaan ITSK Soepraoen</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -68,9 +64,7 @@
                         <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">E-Journal</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu
-                                fugiat nulla pariatur</p>
+                            <p class="description">Jurnal elektronik yang dapat diakses secara online melalui internet</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -80,8 +74,7 @@
                         <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">E-Book</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum</p>
+                            <p class="description">Repository e-book adalah suatu tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -92,8 +85,7 @@
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">E-book Kemenkes</a>
                             </h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                praesentium voluptatum deleniti atque</p>
+                            <p class="description">Tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book dari Kemenkes.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -104,9 +96,7 @@
                         <div>
                             <h4 class="title"><a href="services-details.html" class="stretched-link">Jurnal Proquest</a>
                             </h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                tempore, cum
-                                soluta nobis est eligendi</p>
+                            <p class="description">Kumpulan jurnal ilmiah, berita, dan sumber lainnya dari penerbit dan penyedia layanan informasi proquest</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
