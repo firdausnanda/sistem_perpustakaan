@@ -44,7 +44,8 @@
           </li><!-- End Dashboard Nav -->
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link {{ request()->routeIs('admin.ip.*') ? '' : 'collapsed' }}"
+                  href="{{ route('admin.ip.index') }}">
                   <i class="fa-solid fa-network-wired"></i>
                   <span>IP Local</span>
               </a>

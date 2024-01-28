@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EbookController;
+use App\Http\Controllers\IpController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LandingController;
@@ -61,6 +62,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::get('', [MenuController::class, 'index'])->name('index');
         Route::post('', [MenuController::class, 'store'])->name('store');
         Route::post('/update', [MenuController::class, 'update'])->name('update');
+    });
+
+    // IP
+    Route::group(['prefix' => 'ip', 'as' => 'ip.'], function () {
+        Route::get('', [IpController::class, 'index'])->name('index');
+        Route::post('', [IpController::class, 'store'])->name('store');
+        Route::put('', [IpController::class, 'update'])->name('update');
     });
 
 });

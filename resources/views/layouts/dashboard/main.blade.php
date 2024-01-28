@@ -80,6 +80,7 @@
     <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
     <script src="{{ asset('vendor/tagify/tagify.js') }}"></script>
     <script src="{{ asset('vendor/tagify/tagify.polyfills.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.mask.min.js') }}"></script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/dashboard/main.js') }}"></script>
