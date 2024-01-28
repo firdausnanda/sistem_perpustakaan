@@ -28,7 +28,8 @@
           </li><!-- End Dashboard Nav -->
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link  {{ request()->routeIs('admin.kategori.*') ? '' : 'collapsed' }}"
+                  href="{{ route('admin.kategori.index') }}">
                   <i class="fa-solid fa-table-list"></i>
                   <span>Kategori</span>
               </a>

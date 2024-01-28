@@ -12,7 +12,11 @@ class KategoriController extends Controller
 {
     public function index(Request $request)
     {
-        return '';
+        if ($request->ajax()) {
+            $kategori = Kategori::get();
+            return ResponseFormatter::success($kategori, 'Data berhasil diambil');
+        }
+        return view('pages.dashboard.kategori.index');
     }
     
     public function store(Request $request)
@@ -37,5 +41,30 @@ class KategoriController extends Controller
             Log::error($e->getMessage());
 			return ResponseFormatter::error($e->getMessage(), 'Server Error', 500);
         }
+    }
+
+    public function update(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+			'nama' => 'required|string|max:255',
+		]);
+
+		if ($validator->fails()) {
+			return ResponseFormatter::error($validator->errors(), 'Data Kategori tidak valid', 422);
+		}
+
+        try {
+            
+            $kategori = Kategori::where('id', $request->id)->update([
+                'nama_kategori' => $request->nama
+            ]);
+
+            return ResponseFormatter::success($kategori, 'Data berhasil diubah!');
+            
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            return ResponseFormatter::error($e->getMessage(), 'Kesalahan Server!');
+        }
+        
     }
 }
