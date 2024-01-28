@@ -1,35 +1,37 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-      <div class="container footer-top">
-          <div class="row gy-4">
-              <div class="col-lg-5 col-md-12 footer-about">
-                  <a href="index.html" class="logo d-flex align-items-center">
-                      <span>SIEMPUS</span>
-                  </a>
-                  <p>Perpustakaan ITSK RS dr. Soepraoen Malang merupakan unik pelaksana teknis yang berada di bawah
-                      Wakil Rektor
-                      I ITSK RS dr. Soepraoen Malang. Perpustakaan ITSK RS dr. Soepraoen berdiri mengikuti berdirinya
-                      Akademi
-                      Keperawatan Rumkit Tk.II dr. Soepraoen (Konversi) sesuai SK Kapusdiknakes Depkes RI nomor:
-                      HK.00.06.1.3.2047
-                      tanggal 13 Juli 1999. .</p>
-                  <div class="social-links d-flex mt-4">
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-whatsapp"></i></a>
+      @guest
+          <div class="container footer-top">
+              <div class="row gy-4">
+                  <div class="col-lg-5 col-md-12 footer-about">
+                      <a href="index.html" class="logo d-flex align-items-center">
+                          <span>SIEMPUS</span>
+                      </a>
+                      <p>Perpustakaan ITSK RS dr. Soepraoen Malang merupakan unik pelaksana teknis yang berada di bawah
+                          Wakil Rektor
+                          I ITSK RS dr. Soepraoen Malang. Perpustakaan ITSK RS dr. Soepraoen berdiri mengikuti berdirinya
+                          Akademi
+                          Keperawatan Rumkit Tk.II dr. Soepraoen (Konversi) sesuai SK Kapusdiknakes Depkes RI nomor:
+                          HK.00.06.1.3.2047
+                          tanggal 13 Juli 1999. .</p>
+                      <div class="social-links d-flex mt-4">
+                          <a href=""><i class="bi bi-instagram"></i></a>
+                          <a href=""><i class="bi bi-whatsapp"></i></a>
+                      </div>
                   </div>
-              </div>
 
-              <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                  <h4>Contact Us</h4>
-                  <p class="mt-4"><strong>Phone:</strong> <span>082 229 829298</span></p>
-                  <p><strong>Email:</strong> <span>perpustakaan@itsk-soepraoen.ac.id</span></p>
-              </div>
+                  <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                      <h4>Contact Us</h4>
+                      <p class="mt-4"><strong>Phone:</strong> <span>082 229 829298</span></p>
+                      <p><strong>Email:</strong> <span>perpustakaan@itsk-soepraoen.ac.id</span></p>
+                  </div>
 
+              </div>
           </div>
-      </div>
+      @endguest
 
-      <div class="container copyright text-center mt-4">
+      <div class="container text-center @guest copyright mt-4 @endguest">
           <p>&copy; <span>Copyright</span> <strong class="px-1">SIEMPUS</strong> <span>All Rights Reserved</span></p>
           <div class="credits">
               <!-- All the links in the footer should remain intact. -->

@@ -66,6 +66,10 @@
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name="nama" required>
                             </div>
+                            <label for="colFormLabel" class="col-sm-4 col-form-label">Keterangan</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="keterangan" required>
+                            </div>
                             <label for="colFormLabel" class="col-sm-4 col-form-label">Link</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name="link" required>
@@ -107,6 +111,10 @@
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name="nama" id="nama" required>
                                 <input type="hidden" class="form-control" name="id" id="id">
+                            </div>
+                            <label for="colFormLabel" class="col-sm-4 col-form-label">Keterangan</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="keterangan" id="keterangan" required>
                             </div>
                             <label for="colFormLabel" class="col-sm-4 col-form-label">Link</label>
                             <div class="col-sm-8">
@@ -251,11 +259,13 @@
                 var nama = data.nama;
                 var link = data.link;
                 var akses = data.akses;
+                var keterangan = data.keterangan;
 
                 $('#id').val(id);
                 $('#nama').val(nama);
                 $('#link').val(link);
                 $('#akses').val(akses);
+                $('#keterangan').val(keterangan);
 
                 var _newImageLink = `{{ asset('storage/icon/${data.icon}') }}`;
                 var drEvent = $('#foto').dropify({

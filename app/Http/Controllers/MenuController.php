@@ -25,6 +25,7 @@ class MenuController extends Controller
     {
         $validator = Validator::make($request->all(), [
 			'nama' => 'required|string|max:255',
+			'keterangan' => 'required|string|max:255',
             'link' => 'required|url:http,https',
 			'foto' => 'image|mimes:jpg,png,jpeg|max:2048'
 		]);
@@ -49,6 +50,7 @@ class MenuController extends Controller
                 'nama' => $request->nama,
                 'link' => $request->link,
                 'akses' => $request->akses,
+                'keterangan' => $request->keterangan,
                 'icon' => $fileNameFoto,
             ]);
 
@@ -64,6 +66,7 @@ class MenuController extends Controller
     {
         $validator = Validator::make($request->all(), [
 			'nama' => 'required|string|max:255',
+			'keterangan' => 'required|string|max:255',
             'link' => 'required|url:http,https',
 			'foto' => 'image|mimes:jpg,png,jpeg|max:2048'
 		]);
@@ -95,6 +98,7 @@ class MenuController extends Controller
             $update = $menu->update([
                 'nama' => $request->nama,
                 'link' => $request->link,
+                'keterangan' => $request->keterangan,
                 'akses' => $request->akses,
                 'icon' => $fileNameFoto,
             ]);

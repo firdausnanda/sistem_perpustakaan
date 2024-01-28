@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('icon');
             $table->string('link');
+            $table->text('keterangan');
             $table->enum('akses', [1, 2]);
             $table->timestamps();
         });

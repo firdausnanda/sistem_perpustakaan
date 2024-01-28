@@ -19,6 +19,7 @@ class Menu extends Model
         'icon',
         'link',
         'akses',
+        'keterangan',
     ];
 
     public function tapActivity(Activity $activity, string $eventName)

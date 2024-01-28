@@ -46,11 +46,11 @@ class LoginController extends Controller
               return $this->redirectTo;
               break;
             case 'mahasiswa':
-              $this->redirectTo = '/mahasiswa';
+              $this->redirectTo = '/user';
               return $this->redirectTo;
               break;
             case 'dosen':
-              $this->redirectTo = '/dosen';
+              $this->redirectTo = '/user';
               return $this->redirectTo;
               break;
             default:

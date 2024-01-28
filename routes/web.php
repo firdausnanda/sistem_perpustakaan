@@ -8,7 +8,7 @@ use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MenuController;
-use App\Models\Jurnal;
+use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -77,6 +77,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::get('', [ActivityLogController::class, 'index'])->name('index');
     });
 
+});
+
+// Mahasiswa / Dosen Pages
+Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['role:mahasiswa|dosen']], function () {
+
+    // Dashboard
+    Route::get('', [UserDashboardController::class, 'index'])->name('index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
