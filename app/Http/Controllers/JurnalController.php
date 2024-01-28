@@ -34,6 +34,7 @@ class JurnalController extends Controller
             'penulis' => 'required|string',
             'kategori' => 'required|string',
             'tahun' => 'required|numeric',
+            'subject' => 'required',
             'total_halaman' => 'required|numeric',
 			'foto' => 'required|image|mimes:jpg,png,jpeg|max:2048',
 			'file' => 'required|mimes:pdf|max:2048'
@@ -66,6 +67,8 @@ class JurnalController extends Controller
 				);
             }
 
+            $cek = array_column(json_decode($request->subject), 'value');
+
             $ebook = Jurnal::create([
                 'id_kategori' => $request->kategori,
                 'judul' => $request->judul,
@@ -78,6 +81,8 @@ class JurnalController extends Controller
                 'gambar' => $fileNameFoto,
                 'file' => $fileNameFile,
             ]);
+
+            $ebook->syncTags($cek);
 
             return ResponseFormatter::success($ebook, 'Data berhasil disimpan!');
 
@@ -94,7 +99,8 @@ class JurnalController extends Controller
 
             $e = Jurnal::where('id', $id)->first();
             $kategori = Kategori::get();
-            return view('pages.dashboard.jurnal.edit', compact('e', 'kategori'));
+            $subject = $e->tags->pluck('name');
+            return view('pages.dashboard.jurnal.edit', compact('e', 'kategori', 'subject'));
             
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -110,6 +116,7 @@ class JurnalController extends Controller
             'penulis' => 'required|string',
             'kategori' => 'required|string',
             'tahun' => 'required|numeric',
+            'subject' => 'required',
             'total_halaman' => 'required|numeric',
 			'foto' => 'image|mimes:jpg,png,jpeg|max:2048',
 			'file' => 'mimes:pdf|max:2048'
@@ -157,6 +164,7 @@ class JurnalController extends Controller
                 $fileNameFile = $ebook->file;
             }
         
+            $cek = array_column(json_decode($request->subject), 'value');
 
             $update = $ebook->update([
                 'id_kategori' => $request->kategori,
@@ -170,6 +178,8 @@ class JurnalController extends Controller
                 'gambar' => $fileNameFoto,
                 'file' => $fileNameFile,
             ]);
+
+            $ebook->syncTags($cek);
 
             return ResponseFormatter::success($update, 'Data berhasil diubah!');
 

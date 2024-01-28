@@ -87,6 +87,14 @@
                                                 value="{{ $e->link }}">
                                         </div>
                                         <div class="col-lg-9">
+                                            <label for="subject" class="form-label">Subject<span class="text-danger">*
+                                                </span><span class="fst-italic text-muted" style="font-size: 12px">Tekan
+                                                    Koma (,) untuk menambah subject</span></label>
+                                            <input type="text" data-role="tagsinput" value="{{ $subject }}"
+                                                name="subject" id="subject" class="form-control w-100">
+                                        </div>
+
+                                        <div class="col-lg-9">
                                             <label for="akses" class="form-label">Akses Eksternal</label>
                                             <select name="akses" class="form-select">
                                                 <option value="1" {{ $e->akses == 1 ? 'Selected' : '' }}>Online
@@ -214,7 +222,7 @@
                     },
                     error: function(xhr, ajaxOptions, thrownError) {
                         $.LoadingOverlay('hide');
-                        Swal.fire('Data Gagal Disimpan!', 'Kesalahan Server',
+                        Swal.fire('Data Gagal Disimpan!', 'Lengkapi semua field yang ada',
                             'error');
                     },
                 });
@@ -255,6 +263,9 @@
 
             });
 
+            //init tagify
+            var input = document.querySelector('input[name=subject]');
+            new Tagify(input)
         });
     </script>
 @endsection

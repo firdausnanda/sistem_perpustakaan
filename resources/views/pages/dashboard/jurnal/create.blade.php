@@ -86,6 +86,14 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-9">
+                                            <label for="subject" class="form-label">Subject<span class="text-danger">*
+                                                </span><span class="fst-italic text-muted" style="font-size: 12px">Tekan
+                                                    Koma (,) untuk menambah subject</span></label>
+                                            <input type="text" data-role="tagsinput" name="subject" id="subject"
+                                                class="form-control w-100">
+                                        </div>
+
+                                        <div class="col-lg-9">
                                             <label for="gambar" class="form-label">Gambar</label>
                                             <input type="file" class="upload-foto-dropify" name="foto"
                                                 data-max-file-size="2M" data-allowed-file-extensions="jpg png jpeg"
@@ -130,7 +138,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label class="form-label" for="nama_kategori">Nama Kategori</label>
-                                <input type="text" class="form-control" name="nama_kategori"> 
+                                <input type="text" class="form-control" name="nama_kategori">
                             </div>
                         </div>
                     </div>
@@ -210,13 +218,13 @@
             });
 
             // Kategori
-            $('#tambah-kategori').click(function (e) { 
+            $('#tambah-kategori').click(function(e) {
                 e.preventDefault();
                 $('#modal-kategori').modal('show')
             });
 
             // Submit Kategori
-            $('#form-kategori').submit(function (e) { 
+            $('#form-kategori').submit(function(e) {
                 e.preventDefault();
 
                 $.ajax({
@@ -227,7 +235,7 @@
                     beforeSend: function() {
                         $.LoadingOverlay('show');
                     },
-                    success: function (response) {
+                    success: function(response) {
                         $.LoadingOverlay('hide');
                         if (response.meta.status == "success") {
                             Swal.fire({
@@ -240,8 +248,12 @@
                         }
                     }
                 });
-                
+
             });
+
+            //init tagify
+            var input = document.querySelector('input[name=subject]');
+            new Tagify(input)
 
         });
     </script>

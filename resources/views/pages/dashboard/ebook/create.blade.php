@@ -86,6 +86,12 @@
                                             </select>
                                         </div>
                                         <div class="col-lg-9">
+                                            <label for="subject" class="form-label">Subject<span
+                                                    class="text-danger">* </span><span class="fst-italic text-muted" style="font-size: 12px">Tekan Koma (,) untuk menambah subject</span></label>
+                                            <input type="text" data-role="tagsinput" name="subject" id="subject"
+                                                class="form-control w-100">
+                                        </div>
+                                        <div class="col-lg-9">
                                             <label for="gambar" class="form-label">Gambar</label>
                                             <input type="file" class="upload-foto-dropify" name="foto"
                                                 data-max-file-size="2M" data-allowed-file-extensions="jpg png jpeg"
@@ -242,6 +248,10 @@
                 });
 
             });
+
+            //init tagify
+            var input = document.querySelector('input[name=subject]');
+            new Tagify(input)
 
 
         });

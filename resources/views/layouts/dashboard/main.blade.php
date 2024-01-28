@@ -33,6 +33,7 @@
     <link href="{{ asset('vendor/fontawesome/css/solid.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('vendor/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/dropify/dropify.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/tagify/tagify.css') }}">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -77,6 +78,8 @@
     <script src="{{ asset('vendor/dropify/dropify.js') }}"></script>
     <script src="{{ asset('vendor/loading-overlay/loadingoverlay.min.js') }}"></script>
     <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+    <script src="{{ asset('vendor/tagify/tagify.js') }}"></script>
+    <script src="{{ asset('vendor/tagify/tagify.polyfills.min.js') }}"></script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/dashboard/main.js') }}"></script>
