@@ -5,6 +5,7 @@ use App\Http\Controllers\EbookController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\MenuController;
 use App\Models\Jurnal;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -53,6 +54,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::get('', [KategoriController::class, 'index'])->name('index');
         Route::post('', [KategoriController::class, 'store'])->name('store');
         Route::put('', [KategoriController::class, 'update'])->name('update');
+    });
+    
+    // Menu
+    Route::group(['prefix' => 'menu', 'as' => 'menu.'], function () {
+        Route::get('', [MenuController::class, 'index'])->name('index');
+        Route::post('', [MenuController::class, 'store'])->name('store');
+        Route::post('/update', [MenuController::class, 'update'])->name('update');
     });
 
 });
