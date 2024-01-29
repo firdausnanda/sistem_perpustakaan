@@ -42,7 +42,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">Katalog</a></h4>
+                            <h4 class="title"><a href="https://katalog.itsk-soepraoen.ac.id" target="_blank" class="stretched-link">Katalog</a></h4>
                             <p class="description">Daftar atau direktori yang memuat informasi buku perpustakaan ITSK Soepraoen</p>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">Repository</a></h4>
+                            <h4 class="title"><a href="https://repository.itsk-soepraoen.ac.id/" target="_blank" class="stretched-link">Repository</a></h4>
                             <p class="description">Kumpulan jenis materi koleksi perpustakaan ITSK Soepraoen</p>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">E-Journal</a></h4>
+                            <h4 class="title"><a href="{{ route('login') }}" class="stretched-link">E-Journal</a></h4>
                             <p class="description">Jurnal elektronik yang dapat diakses secara online melalui internet</p>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">E-Book</a></h4>
+                            <h4 class="title"><a href="{{ route('login') }}" class="stretched-link">E-Book</a></h4>
                             <p class="description">Repository e-book adalah suatu tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book.</p>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">E-book Kemenkes</a>
+                            <h4 class="title"><a href="https://promkes.kemkes.go.id/category/buku" target="_blank" class="stretched-link">E-book Kemenkes</a>
                             </h4>
                             <p class="description">Tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book dari Kemenkes.</p>
                         </div>
@@ -94,7 +94,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
                         <div>
-                            <h4 class="title"><a href="services-details.html" class="stretched-link">Jurnal Proquest</a>
+                            <h4 class="title"><a href="https://www.proquest.com/" target="_blank" class="stretched-link">Jurnal Proquest</a>
                             </h4>
                             <p class="description">Kumpulan jurnal ilmiah, berita, dan sumber lainnya dari penerbit dan penyedia layanan informasi proquest</p>
                         </div>
