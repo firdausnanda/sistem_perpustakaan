@@ -229,7 +229,7 @@
                         <div class="col-md-6">
                             <div class="info-item" data-aos="fade" data-aos-delay="500">
                                 <i class="bi bi-clock"></i>
-                                <h3>Jam Buku</h3>
+                                <h3>Jam Buka</h3>
                                 <p>Senin - Jumat</p>
                                 <p>08.00 - 15.00 WIB</p>
                             </div>

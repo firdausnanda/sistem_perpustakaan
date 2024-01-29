@@ -8,7 +8,7 @@
                       <a href="index.html" class="logo d-flex align-items-center">
                           <span>SIEMPUS</span>
                       </a>
-                      <p>Perpustakaan ITSK RS dr. Soepraoen Malang merupakan unik pelaksana teknis yang berada di bawah
+                      <p>Perpustakaan ITSK RS dr. Soepraoen Malang merupakan unit pelaksana teknis yang berada di bawah
                           Wakil Rektor
                           I ITSK RS dr. Soepraoen Malang. Perpustakaan ITSK RS dr. Soepraoen berdiri mengikuti berdirinya
                           Akademi
@@ -31,8 +31,8 @@
           </div>
       @endguest
 
-      <div class="container text-center @guest copyright mt-4 @endguest">
-          <p>&copy; <span>Copyright</span> <strong class="px-1">SIEMPUS</strong> <span>All Rights Reserved</span></p>
+      <div class="container text-center @guest mt-5 @endguest">
+          <p class="mb-0">&copy; <span>Copyright</span> <strong class="px-1">SIEMPUS</strong> <span>All Rights Reserved</span></p>
           <div class="credits">
               <!-- All the links in the footer should remain intact. -->
               <!-- You can delete the links only if you've purchased the pro version. -->
