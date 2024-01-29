@@ -202,7 +202,7 @@
 
                     <div class="row gy-4">
                         <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="200" style="max-width: 201;">
+                            <div class="info-item" style="height: 250px" data-aos="fade" data-aos-delay="200" style="max-width: 201;">
                                 <i class="bi bi-geo-alt"></i>
                                 <h3>Alamat</h3>
                                 <p>Jl. S. Supriadi No. 22</p>
@@ -211,7 +211,7 @@
                         </div><!-- End Info Item -->
 
                         <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="300">
+                            <div class="info-item" style="height: 250px" data-aos="fade" data-aos-delay="300">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Hubungi Kami</h3>
                                 <p>082 229 829298</p>
@@ -219,7 +219,7 @@
                         </div><!-- End Info Item -->
 
                         <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="400">
+                            <div class="info-item" style="height: 250px" data-aos="fade" data-aos-delay="400">
                                 <i class="bi bi-envelope"></i>
                                 <h3>Email</h3>
                                 <p>perpustakaan@itsk-soepraoen.ac.id</p>
@@ -227,7 +227,7 @@
                         </div><!-- End Info Item -->
 
                         <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="500">
+                            <div class="info-item" style="height: 250px" data-aos="fade" data-aos-delay="500">
                                 <i class="bi bi-clock"></i>
                                 <h3>Jam Buka</h3>
                                 <p>Senin - Jumat</p>
