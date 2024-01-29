@@ -16,8 +16,8 @@
                           HK.00.06.1.3.2047
                           tanggal 13 Juli 1999. .</p>
                       <div class="social-links d-flex mt-4">
-                          <a href=""><i class="bi bi-instagram"></i></a>
-                          <a href=""><i class="bi bi-whatsapp"></i></a>
+                          <a href="https://www.instagram.com/libitsk.soepraoen"><i class="bi bi-instagram"></i></a>
+                          <a href="https://wa.me/082229829298"><i class="bi bi-whatsapp"></i></a>
                       </div>
                   </div>
 
