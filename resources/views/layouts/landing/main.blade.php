@@ -26,6 +26,10 @@
   <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/fontawesome/css/fontawesome.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/fontawesome/css/brands.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/fontawesome/css/solid.css') }}" rel="stylesheet">
+
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -62,6 +66,7 @@
   </div>
 
   <!-- Vendor JS Files -->
+  <script src="{{ asset('vendor/jquery/jquery-3.6.0.min.js') }}"></script>
   <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('vendor/purecounter/purecounter_vanilla.js') }}"></script>
@@ -72,6 +77,8 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/main.js') }}"></script>
+
+  @yield('script')
 
 </body>
 

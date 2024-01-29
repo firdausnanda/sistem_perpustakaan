@@ -16,19 +16,31 @@
                             <img src="{{ asset('img/ebook/pdf.png') }}" style="width: 50px; height: auto;" alt="">
                         </div>
                         <div class="col-md-11">
-                            <h6 class="fw-bold">{{ $e->judul }}</h6>
+                            <a class="fw-bold" href="{{ route('user.ebook.detail', $e->id) }}">
+                                {{ $e->judul }}
+                            </a>
+                            <div>
+                                <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-eye"></i> <span
+                                        class="text-dark fw-bold">{{ $e->counter ? $e->counter->lihat : 0 }}</span></span>
+                                <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-download"></i>
+                                    <span class="text-dark fw-bold">{{ $e->counter ? $e->counter->download : 0 }}</span></span>
+                            </div>
+
                             <span class="text-secondary" style="font-size: 13px">Oleh : <span
                                     class="text-dark fw-bold">{{ $e->penulis }}</span></span>
-                            <span class="text-secondary" style="font-size: 13px">Tahun : <span
-                                    class="text-dark fw-bold">{{ $e->tahun }}</span></span>
-                            <p style="font-size: 14px">{{ Str::limit($e->abstrak, 320) }}</p>
+                            @if ($e->tahun)
+                                <span class="text-secondary" style="font-size: 13px">Tahun : <span
+                                        class="text-dark fw-bold">{{ $e->tahun }}</span></span>
+                            @endif
+
+                            <p class="text-secondary" style="font-size: 14px">{{ Str::limit($e->abstrak, 320) }}</p>
                         </div>
                     @endforeach
                 </div>
 
                 <div class="row">
                     <div class="col">
-                
+
                         @if ($ebook->count() > 0)
                             @if ($ebook instanceof \Illuminate\Pagination\LengthAwarePaginator)
                                 <nav aria-label="Page navigation example">
@@ -38,8 +50,7 @@
                                         </li>
                                         @for ($i = 1; $i <= $ebook->lastPage(); $i++)
                                             <li class="page-item {{ $ebook->currentPage() == $i ? 'active' : '' }}">
-                                                <a class="page-link"
-                                                    href="{{ $ebook->url($i) }}">{{ $i }}</a>
+                                                <a class="page-link" href="{{ $ebook->url($i) }}">{{ $i }}</a>
                                             </li>
                                         @endfor
                                         <li class="page-item"><a class="page-link"

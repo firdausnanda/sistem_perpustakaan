@@ -11,6 +11,7 @@
               <!-- Nav Menu -->
               <nav id="navmenu" class="navmenu">
                   <ul>
+                      <li><a href="{{ route('user.index') }}" class="text-white">Menu</a></li>
                       <li><a href="{{ route('user.ebook.index') }}" class="text-white">E-Book</a></li>
                       <li><a href="#" class="text-white">E-Jurnal</a></li>
                   </ul>
