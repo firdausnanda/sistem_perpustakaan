@@ -112,7 +112,7 @@
                                         <div class="col-lg-9">
                                             <label for="file" class="form-label">File</label>
                                             <input type="file" class="upload-file" name="file"
-                                                data-max-file-size="2M" data-allowed-file-extensions="pdf" id="file"
+                                                data-max-file-size="10M" data-allowed-file-extensions="pdf" id="file"
                                                 data-errors-position="outside"
                                                 data-default-file="{{ asset('storage/file_buku/' . $e->file) }}" />
                                         </div>
