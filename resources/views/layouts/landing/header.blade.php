@@ -2,7 +2,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center @auth bg-danger @endauth">
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
               <h1 class="text-white">SIEMPUS</h1>
               <span>.</span>
           </a>
