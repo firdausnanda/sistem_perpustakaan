@@ -170,7 +170,7 @@
             // Init Dropify
             $('.upload-file').dropify({
                 messages: {
-                    'default': '<i class="fa-solid fa-file-pdf"></i> <br> Unggah file anda disini <br> <span>  Type: PDF (Max. 2MB) </span> <br> <button class="btn btn-yellow mt-3">Pilih File</button>',
+                    'default': '<i class="fa-solid fa-file-pdf"></i> <br> Unggah file anda disini <br> <span>  Type: PDF (Max. 10MB) </span> <br> <button class="btn btn-yellow mt-3">Pilih File</button>',
                     'replace': 'Klik untuk mengganti file anda',
                     'remove': 'Hapus',
                     'error': 'Ooops, something wrong happended.'
