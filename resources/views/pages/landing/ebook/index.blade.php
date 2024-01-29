@@ -26,6 +26,32 @@
                     @endforeach
                 </div>
 
+                <div class="row">
+                    <div class="col">
+                
+                        @if ($ebook->count() > 0)
+                            @if ($ebook instanceof \Illuminate\Pagination\LengthAwarePaginator)
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link"
+                                                href="{{ $ebook->previousPageUrl() }}">Prev</a>
+                                        </li>
+                                        @for ($i = 1; $i <= $ebook->lastPage(); $i++)
+                                            <li class="page-item {{ $ebook->currentPage() == $i ? 'active' : '' }}">
+                                                <a class="page-link"
+                                                    href="{{ $ebook->url($i) }}">{{ $i }}</a>
+                                            </li>
+                                        @endfor
+                                        <li class="page-item"><a class="page-link"
+                                                href="{{ $ebook->nextPageUrl() }}">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            @endif
+                        @endif
+                    </div>
+                </div>
+
             </div>
         </div>
 
