@@ -101,6 +101,17 @@
                     </div>
                 </div><!-- End Service Item -->
 
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-backpack"></i></div>
+                        <div>
+                            <h4 class="title"><a href="https://jurnal.poltekkes-soepraoen.ac.id/index.php/HWS" target="_blank" class="stretched-link">Jurnal Hesti Wirasakti</a>
+                            </h4>
+                            <p class="description">Tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book dari ITSK Soepraoen.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
             </div>
 
         </div>
