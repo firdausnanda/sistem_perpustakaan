@@ -107,7 +107,7 @@
                         <div>
                             <h4 class="title"><a href="https://jurnal.poltekkes-soepraoen.ac.id/index.php/HWS" target="_blank" class="stretched-link">Jurnal Hesti Wirasakti</a>
                             </h4>
-                            <p class="description">Tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book dari ITSK Soepraoen.</p>
+                            <p class="description">Jurnal akses terbuka dan peer-review yang diterbitkan oleh Institut Teknologi, Sains, dan Kesehatan RS dr. Soepraoen.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
