@@ -120,7 +120,7 @@ class EbookController extends Controller
             'subject' => 'required',
             'total_halaman' => 'required|numeric',
 			'foto' => 'image|mimes:jpg,png,jpeg|max:2048',
-			'file' => 'mimes:pdf|max:10000'
+			'file' => 'mimes:pdf'
 		]);
 
 		if ($validator->fails()) {
