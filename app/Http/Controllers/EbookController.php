@@ -37,7 +37,7 @@ class EbookController extends Controller
             'tahun' => 'required|numeric',
             'total_halaman' => 'required|numeric',
 			'foto' => 'required|image|mimes:jpg,png,jpeg|max:2048',
-			'file' => 'required|mimes:pdf|max:2048'
+			'file' => 'required|mimes:pdf|max:10000'
 		]);
 
 		if ($validator->fails()) {
@@ -120,7 +120,7 @@ class EbookController extends Controller
             'subject' => 'required',
             'total_halaman' => 'required|numeric',
 			'foto' => 'image|mimes:jpg,png,jpeg|max:2048',
-			'file' => 'mimes:pdf|max:2048'
+			'file' => 'mimes:pdf|max:10000'
 		]);
 
 		if ($validator->fails()) {
