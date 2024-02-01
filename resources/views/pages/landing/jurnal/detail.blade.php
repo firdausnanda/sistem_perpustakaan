@@ -28,7 +28,7 @@
                 </div>
 
                 @if ($e->gambar)
-                    <img style="max-height: 250px; width: auto" src="{{ asset('storage/gambar_buku/' . $e->gambar) }}"
+                    <img style="max-height: 250px; width: auto" src="{{ asset('storage/gambar_jurnal/' . $e->gambar) }}"
                         alt="">
                 @else
                     <img style="max-height: 250px; width: auto" src="{{ asset('img/buku.png') }}" alt="">
@@ -88,7 +88,7 @@
             $('.btn-download').click(function(e) {
                 e.preventDefault();
 
-                var path = "{{ asset('storage/file_buku/:slug') }}"
+                var path = "{{ asset('storage/file_jurnal/:slug') }}"
                 var link = path.replace(':slug', $(this).data("pdf"));
 
                 $.ajax({
