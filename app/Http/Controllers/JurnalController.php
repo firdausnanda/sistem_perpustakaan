@@ -54,6 +54,8 @@ class JurnalController extends Controller
 					$request->file('foto'),
 					$fileNameFoto
 				);
+            }else{
+                $fileNameFoto = '';
             }
 
             if ($request->hasFile('file')) {
@@ -65,6 +67,8 @@ class JurnalController extends Controller
 					$request->file('file'),
 					$fileNameFile
 				);
+            }else{
+                $fileNameFile = '';
             }
 
             $cek = array_column(json_decode($request->subject), 'value');
