@@ -3,8 +3,10 @@
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
           <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
-              <h1 class="text-white">SIEMPUS</h1>
-              <span>.</span>
+              <img id="putih" class="d-block" style="min-width: auto; min-height: 70px;" src="{{ asset('img/title-putih.png') }}" alt="">
+              <img id="hitam" class="d-none" style="min-width: auto; min-height: 70px;" src="{{ asset('img/title-hitam.png') }}" alt="">
+              {{-- <h1 class="text-white">SIEMPUS</h1>
+              <span>.</span> --}}
           </a>
 
           @auth
@@ -71,9 +73,9 @@
                               <li><a href="#">Tata Cara Peminjaman dan Pengembalian</a></li>
                           </ul>
                       </li>
-                      <li><a href="index.html#services">Fasilitas</a></li>
-                      <li><a href="index.html#contact">Contact</a></li>
-                      <li><a href="index.html#contact">Usul Buku</a></li>
+                      <li><a href="index.html">Fasilitas</a></li>
+                      <li><a href="index.html">Contact</a></li>
+                      <li><a href="index.html">Usul Buku</a></li>
                   </ul>
 
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

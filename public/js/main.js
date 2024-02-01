@@ -44,10 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const selectBody = document.querySelector('body');
   const selectHeader = document.querySelector('#header');
+  const selectHitam = document.querySelector('#hitam');
+  const selectPutih = document.querySelector('#putih');
 
   function toggleScrolled() {
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    window.scrollY > 100 ? $('#hitam').addClass('d-block').removeClass('d-none') : $('#hitam').addClass('d-none').removeClass('d-block')
+    window.scrollY > 100 ? $('#putih').addClass('d-none').removeClass('d-block') : $('#putih').addClass('block').removeClass('d-none')
+    // console.log($('#hitam'));
   }
 
   document.addEventListener('scroll', toggleScrolled);

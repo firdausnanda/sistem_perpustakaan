@@ -4,7 +4,7 @@
     <!-- Hero Section - Home Page -->
     <section id="hero" class="hero">
 
-        <img src="{{ asset('img/hero-bg.jpg') }}" alt="" data-aos="fade-in">
+        <img src="{{ asset('img/hero-bg-2.jpg') }}" alt="" data-aos="fade-in">
 
         <div class="container">
             <div class="row">
