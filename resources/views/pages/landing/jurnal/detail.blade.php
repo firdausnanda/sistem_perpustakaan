@@ -45,7 +45,9 @@
 
                 @if ($e->link)
                     <span style="font-size: 16px" class="mt-3 text-secondary">Link</span>
-                    <span style="font-size: 16px" class="mt-2">{{ $e->link ?? '-' }}</span>
+                    <a style="font-size: 16px" class="mt-2" href="{{ $e->link ?? '#' }}" target="_blank">
+                        <span style="font-size: 16px" class="mt-2">Download</span>
+                    </a>
                 @endif
 
                 <span style="font-size: 16px" class="mt-3 text-secondary"><i class="fa-solid fa-download"></i> Berkas ini
