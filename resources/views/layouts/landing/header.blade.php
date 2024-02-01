@@ -3,8 +3,8 @@
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
           <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
-              <img id="putih" class="d-block" style="min-width: auto; min-height: 70px;" src="{{ asset('img/title-putih.png') }}" alt="">
-              <img id="hitam" class="d-none" style="min-width: auto; min-height: 70px;" src="{{ asset('img/title-hitam.png') }}" alt="">
+              <img id="putih" class="d-block" style="min-width: auto; min-height: 100px;" src="{{ asset('img/title-putih.png') }}" alt="">
+              <img id="hitam" class="d-none" style="min-width: auto; min-height: 100px;" src="{{ asset('img/title-hitam.png') }}" alt="">
               {{-- <h1 class="text-white">SIEMPUS</h1>
               <span>.</span> --}}
           </a>
@@ -13,9 +13,9 @@
               <!-- Nav Menu -->
               <nav id="navmenu" class="navmenu">
                   <ul>
-                      <li><a href="{{ route('user.index') }}" class="text-white">Menu</a></li>
-                      <li><a href="{{ route('user.ebook.index') }}" class="text-white">E-Book</a></li>
-                      <li><a href="#" class="text-white">E-Jurnal</a></li>
+                      <li><a href="{{ route('user.index') }}" class="text-dark">Menu</a></li>
+                      <li><a href="{{ route('user.ebook.index') }}" class="text-dark">E-Book</a></li>
+                      <li><a href="#" class="text-dark">E-Jurnal</a></li>
                   </ul>
 
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
