@@ -3,8 +3,8 @@
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
           <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
-              <img id="putih" class="d-block" style="min-width: auto; min-height: 100px;" src="{{ asset('img/title-putih.png') }}" alt="">
-              <img id="hitam" class="d-none" style="min-width: auto; min-height: 100px;" src="{{ asset('img/title-hitam.png') }}" alt="">
+              <img id="putih" class="d-block" style="min-width: auto; min-height: 95px;" src="{{ asset('img/title-putih.png') }}" alt="">
+              <img id="hitam" class="d-none" style="min-width: auto; min-height: 95px;" src="{{ asset('img/title-hitam.png') }}" alt="">
               {{-- <h1 class="text-white">SIEMPUS</h1>
               <span>.</span> --}}
           </a>
