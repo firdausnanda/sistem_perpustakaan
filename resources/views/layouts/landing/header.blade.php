@@ -3,10 +3,14 @@
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
           <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
-              <img id="putih" class="d-block" style="min-width: auto; min-height: 90px;" src="{{ asset('img/title-putih.png') }}" alt="">
-              <img id="hitam" class="d-none" style="min-width: auto; min-height: 90px;" src="{{ asset('img/title-hitam.png') }}" alt="">
-              {{-- <h1 class="text-white">SIEMPUS</h1>
-              <span>.</span> --}}
+              <img src="{{ asset('img/logo.png') }}" alt="">
+              {{-- <img id="hitam" class="d-none" style="min-width: auto; min-height: 90px;" src="{{ asset('img/title-hitam.png') }}" alt=""> --}}
+              <h5 id="judul" class="text-white fw-bold">
+                  SIEMPUS
+                  <span>.</span><br>
+                  <span id="description" class="text-white d-block" style="font-size: 12px; font-weight: 400">Sistem Informasi
+                      Perpustakaan</span>
+              </h5>
           </a>
 
           @auth
