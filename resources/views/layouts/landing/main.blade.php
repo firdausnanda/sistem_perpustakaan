@@ -74,6 +74,8 @@
   <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('vendor/aos/aos.js') }}"></script>
   <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('vendor/loading-overlay/loadingoverlay.min.js') }}"></script>
+  <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/main.js') }}"></script>

@@ -89,6 +89,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['role:mahasi
     // Ebook
     Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {
         Route::get('', [UserEbookController::class, 'index'])->name('index');
+        Route::get('/download', [UserEbookController::class, 'download'])->name('download');
         Route::get('/{id}', [UserEbookController::class, 'detail'])->name('detail');
     });
 });

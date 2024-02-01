@@ -91,8 +91,26 @@
                 var path = "{{ asset('storage/file_buku/:slug') }}"
                 var link = path.replace(':slug', $(this).data("pdf"));
 
-                $('#data-preview').attr('src', link)
-                $('#preview').modal('show');
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('user.ebook.download') }}",
+                    data: {
+                        id: "{{ $e->id }}"
+                    },
+                    dataType: "JSON",
+                    beforeSend: function() {
+                        $.LoadingOverlay('show');
+                    },
+                    success: function (response) {
+                        $.LoadingOverlay('hide');
+                        if (response.meta.status == "success") {
+                            Swal.fire('Sukses!', response.meta.message, 'success');
+                            $('#data-preview').attr('src', link)
+                            $('#preview').modal('show');
+                        }
+                    }
+                });
+
             });
         });
     </script>

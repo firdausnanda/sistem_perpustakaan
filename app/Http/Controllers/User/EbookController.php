@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Helpers\ResponseFormatter;
 use App\Http\Controllers\Controller;
 use App\Models\Counter;
 use App\Models\Ebook;
@@ -24,5 +25,12 @@ class EbookController extends Controller
         $e = Ebook::where('id', $id)->first();
         $counter = Counter::updateOrCreate(['model' => Ebook::class, 'model_id' => $id], ['lihat' => DB::raw('lihat + 1'), 'download' => DB::raw('download')]);
         return view('pages.landing.ebook.detail', compact('e'));
+    }
+
+    public function download(Request $request)
+    {
+        $e = Ebook::where('id', $request->id)->first();
+        $counter = Counter::updateOrCreate(['model' => Ebook::class, 'model_id' => $request->id], ['lihat' => DB::raw('lihat'), 'download' => DB::raw('download + 1')]);
+        return ResponseFormatter::success($counter, 'data berhasil ditambahkan');
     }
 }
