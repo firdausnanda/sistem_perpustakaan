@@ -32,12 +32,12 @@ class JurnalController extends Controller
         $validator = Validator::make($request->all(), [
 			'judul' => 'required|string|max:255',
             'penulis' => 'required|string',
-            'kategori' => 'required|string',
-            'tahun' => 'required|numeric',
+            'kategori' => 'string',
+            'tahun' => 'numeric',
             'subject' => 'required',
-            'total_halaman' => 'required|numeric',
-			'foto' => 'required|image|mimes:jpg,png,jpeg|max:2048',
-			'file' => 'required|mimes:pdf|max:2048'
+            'total_halaman' => 'numeric',
+			'foto' => 'image|mimes:jpg,png,jpeg|max:2048',
+			'file' => 'mimes:pdf|max:2048'
 		]);
 
 		if ($validator->fails()) {
