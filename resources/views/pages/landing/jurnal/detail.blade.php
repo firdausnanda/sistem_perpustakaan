@@ -43,6 +43,11 @@
                 <span style="font-size: 16px" class="mt-3 text-secondary">Keterangan</span>
                 <span style="font-size: 16px" class="mt-2">{{ $e->keterangan ?? '-' }}</span>
 
+                @if ($e->link)
+                    <span style="font-size: 16px" class="mt-3 text-secondary">Link</span>
+                    <span style="font-size: 16px" class="mt-2">{{ $e->link ?? '-' }}</span>
+                @endif
+
                 <span style="font-size: 16px" class="mt-3 text-secondary"><i class="fa-solid fa-download"></i> Berkas ini
                     telah didownload sebanyak {{ $e->counter ? $e->counter->download : 0 }} kali</span>
 
@@ -101,7 +106,7 @@
                     beforeSend: function() {
                         $.LoadingOverlay('show');
                     },
-                    success: function (response) {
+                    success: function(response) {
                         $.LoadingOverlay('hide');
                         if (response.meta.status == "success") {
                             Swal.fire('Sukses!', response.meta.message, 'success');
