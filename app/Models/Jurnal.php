@@ -46,4 +46,9 @@ class Jurnal extends Model
 			->logOnlyDirty(true)
 			->logUnguarded();
 	}
+    
+    public function counter()
+    {
+        return $this->belongsTo(Counter::class, 'id', 'model_id');
+    }
 }

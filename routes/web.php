@@ -10,6 +10,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\User\EbookController as UserEbookController;
+use App\Http\Controllers\User\JurnalController as UserJurnalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +92,13 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['role:mahasi
         Route::get('', [UserEbookController::class, 'index'])->name('index');
         Route::get('/download', [UserEbookController::class, 'download'])->name('download');
         Route::get('/{id}', [UserEbookController::class, 'detail'])->name('detail');
+    });
+
+    // Jurnal
+    Route::group(['prefix' => 'jurnal', 'as' => 'jurnal.'], function () {
+        Route::get('', [UserJurnalController::class, 'index'])->name('index');
+        Route::get('/download', [UserJurnalController::class, 'download'])->name('download');
+        Route::get('/{id}', [UserJurnalController::class, 'detail'])->name('detail');
     });
 });
 

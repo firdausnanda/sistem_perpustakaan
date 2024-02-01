@@ -19,7 +19,7 @@
                   <ul>
                       <li><a href="{{ route('user.index') }}">Menu</a></li>
                       <li><a href="{{ route('user.ebook.index') }}">E-Book</a></li>
-                      <li><a href="#">E-Jurnal</a></li>
+                      <li><a href="{{ route('user.jurnal.index') }}">E-Jurnal</a></li>
                   </ul>
 
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
