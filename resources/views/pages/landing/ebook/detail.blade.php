@@ -104,7 +104,6 @@
                     success: function (response) {
                         $.LoadingOverlay('hide');
                         if (response.meta.status == "success") {
-                            Swal.fire('Sukses!', response.meta.message, 'success');
                             $('#data-preview').attr('src', link)
                             $('#preview').modal('show');
                         }
