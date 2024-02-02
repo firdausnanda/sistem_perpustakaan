@@ -27,7 +27,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 
-Auth::routes();
+Auth::routes([
+    'register' => false, 
+    'reset' => false, 
+    'verify' => false, 
+]);
 
 // Admin Pages
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admin']], function () {
