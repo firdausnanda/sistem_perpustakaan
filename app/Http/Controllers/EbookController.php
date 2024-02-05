@@ -36,7 +36,7 @@ class EbookController extends Controller
             'subject' => 'required',
             'tahun' => 'required|numeric',
             'total_halaman' => 'required|numeric',
-			'foto' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+			'foto' => 'image|mimes:jpg,png,jpeg|max:2048',
 			'file' => 'required|mimes:pdf|max:10000'
 		]);
 
@@ -54,6 +54,8 @@ class EbookController extends Controller
 					$request->file('foto'),
 					$fileNameFoto
 				);
+            }else{
+                $fileNameFoto = '';
             }
 
             if ($request->hasFile('file')) {
