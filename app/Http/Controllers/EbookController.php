@@ -15,6 +15,31 @@ class EbookController extends Controller
     public function index(Request $request) 
     {
         if ($request->ajax()) {
+            
+            
+            if ($request->search) {
+
+                switch ($request->search_by) {
+                    case 1:
+                        $get = Ebook::where('judul', 'like', '%' . $request->search . '%')->get();
+                        break;
+
+                    case 2:
+                        $get = Ebook::where('penulis', 'like', '%' . $request->search . '%')->get();
+                        break;
+
+                    case 3:
+                        $get = Ebook::withAnyTags($request->search)->get();
+                        break;
+                    
+                    default:
+                        $get = '';
+                        break;
+                }
+
+                return ResponseFormatter::success($get, 'data berhasil diambil');
+            }
+
             $data = Ebook::get();
             return ResponseFormatter::success($data, 'data berhasil diambil');
         }

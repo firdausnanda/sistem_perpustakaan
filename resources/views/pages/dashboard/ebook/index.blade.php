@@ -26,7 +26,25 @@
                             <div class="card-body">
                                 <h5 class="card-title">E-Book</h5>
 
-                                <div class="table-responsive">
+                                <div class="row g-3">
+                                    <div class="col-auto">
+                                        <div class="col-auto">
+                                            <input type="text" id="search" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <select id="search_by" class="form-select">
+                                            <option value="1">Judul</option>
+                                            <option value="2">Penulis</option>
+                                            <option value="3">Subject</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-secondary btn-cari">Cari</button>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive mt-3">
                                     <table id="table-ebook" class="table w-100">
                                         <thead>
                                             <tr>
@@ -60,10 +78,16 @@
             var table = $('#table-ebook').DataTable({
                 ajax: {
                     url: "{{ route('admin.ebook.index') }}",
-                    type: "GET"
+                    type: "GET",
+                    data: function(d){
+                        d.search = $('#search').val();
+                        d.search_by = $('#search_by').val();
+                    }
                 },
                 lengthChange: false,
                 ordering: true,
+                processing: true,
+                searching: false,
                 buttons: [{
                     text: 'Tambah Data',
                     className: 'btn btn-primary btn-sm btn-tambah',
@@ -117,11 +141,17 @@
                 event.preventDefault()
 
                 var data = table.row($(this).parents('tr')).data();
-                
+
                 var url = "{{ route('admin.ebook.edit', ':id') }}"
                 var link = url.replace(':id', data.id)
-                
+
                 location.href = link
+            });
+
+            // Cari
+            $(".btn-cari").click(function (e) { 
+                e.preventDefault();
+                table.ajax.reload()
             });
         });
     </script>
