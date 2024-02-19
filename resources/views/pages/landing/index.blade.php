@@ -111,6 +111,17 @@
                         </div>
                     </div>
                 </div><!-- End Service Item -->
+                
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-book-half"></i></div>
+                        <div>
+                            <h4 class="title"><a href="https://bookshelf.vitalsource.com/" target="_blank" class="stretched-link">Vital Source</a>
+                            </h4>
+                            <p class="description">Platform e library terkemuka di dunia dengan koleksi yang sangat lengkap dari penerbit kelas dunia.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
 
             </div>
 
