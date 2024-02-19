@@ -38,6 +38,17 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.field-icon {
+  cursor: pointer;
+  margin-right: 15px;
+  float: right;
+  margin-left: -25px;
+  margin-top: -26px;
+  position: relative;
+  color: #ACACAC;
+  z-index: 2;
+}
+
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/

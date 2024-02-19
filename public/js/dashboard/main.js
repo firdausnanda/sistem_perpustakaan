@@ -334,4 +334,26 @@
     }, 200);
   }
 
+    /**
+    * Password Visibility button
+    */
+    const password = document.querySelector('.toggle-password');
+    if (password) {
+      on('click', '.toggle-password', function(e) {
+        
+        var x = document.getElementById("password");
+        var icon = select("#toggle-password");
+  
+        if (x.type === "password") {
+          x.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          x.type = "password";
+          icon.classList.add("fa-eye");
+          icon.classList.remove("fa-eye-slash");
+        }
+      });      
+    }
+
 })();

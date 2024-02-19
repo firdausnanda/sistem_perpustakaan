@@ -27,6 +27,9 @@
     <link href="{{ asset('vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome/css/fontawesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome/css/brands.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome/css/solid.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -89,6 +92,9 @@
                                             <input id="password" type="password"
                                                 class="form-control @error('password') is-invalid @enderror"
                                                 name="password" required autocomplete="current-password">
+                                            <span toggle="#password-field" id="toggle-password"
+                                                class="fa-solid fa-eye field-icon toggle-password"></span>
+
 
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
