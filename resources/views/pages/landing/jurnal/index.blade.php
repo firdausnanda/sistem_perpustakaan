@@ -23,7 +23,8 @@
                                 <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-eye"></i> <span
                                         class="text-dark fw-bold">{{ $e->counter ? $e->counter->lihat : 0 }}</span></span>
                                 <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-download"></i>
-                                    <span class="text-dark fw-bold">{{ $e->counter ? $e->counter->download : 0 }}</span></span>
+                                    <span
+                                        class="text-dark fw-bold">{{ $e->counter ? $e->counter->download : 0 }}</span></span>
                             </div>
 
                             <span class="text-secondary" style="font-size: 13px">Oleh : <span
@@ -42,23 +43,7 @@
                     <div class="col">
 
                         @if ($jurnal->count() > 0)
-                            @if ($jurnal instanceof \Illuminate\Pagination\LengthAwarePaginator)
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link"
-                                                href="{{ $jurnal->previousPageUrl() }}">Prev</a>
-                                        </li>
-                                        @for ($i = 1; $i <= $jurnal->lastPage(); $i++)
-                                            <li class="page-item {{ $jurnal->currentPage() == $i ? 'active' : '' }}">
-                                                <a class="page-link" href="{{ $jurnal->url($i) }}">{{ $i }}</a>
-                                            </li>
-                                        @endfor
-                                        <li class="page-item"><a class="page-link"
-                                                href="{{ $jurnal->nextPageUrl() }}">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            @endif
+                            {{ $jurnal->onEachSide(1)->links('pagination::bootstrap-5') }}
                         @endif
                     </div>
                 </div>
