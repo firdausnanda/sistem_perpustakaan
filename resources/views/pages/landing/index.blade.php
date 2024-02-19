@@ -53,7 +53,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                         <div>
-                            <h4 class="title"><a href="https://repository.itsk-soepraoen.ac.id/" target="_blank" class="stretched-link">Repository</a></h4>
+                            <h4 class="title"><a href="http://repository.itsk-soepraoen.ac.id/" target="_blank" class="stretched-link">Repository</a></h4>
                             <p class="description">Kumpulan jenis materi koleksi perpustakaan ITSK Soepraoen</p>
                         </div>
                     </div>
