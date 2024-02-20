@@ -79,7 +79,7 @@
                       </li>
                       <li><a href="index.html">Fasilitas</a></li>
                       <li><a href="index.html">Contact</a></li>
-                      <li><a href="index.html">Usul Buku</a></li>
+                      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeIJ9ssG3mzsJpMmw4KJ9xBsS2E_dcRSOqQS5FsbZ5oBysz7g/viewform" target="_blank">Usul Buku</a></li>
                   </ul>
 
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
