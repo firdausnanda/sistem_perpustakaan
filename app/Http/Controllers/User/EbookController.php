@@ -8,14 +8,27 @@ use App\Models\Counter;
 use App\Models\Ebook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 
 class EbookController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $ebook = Ebook::with(["counter" => function($q){
             $q->where('counter.model', Ebook::class);
         }])->paginate(10);
+
+            
+        if ($request->ajax()) {
+
+            $ebook = Ebook::with(["counter" => function($q){
+                $q->where('counter.model', Ebook::class);
+            }])->where('judul', 'like', '%'. $request->cari .'%')->paginate(10);
+    
+            $render = View::make('pages.landing.ebook.konten', compact('ebook'))->render();
+
+            return ResponseFormatter::success($render, 'data berhasil diambil');
+        }
 
         return view('pages.landing.ebook.index', compact('ebook'));
     }
