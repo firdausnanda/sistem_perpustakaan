@@ -35,9 +35,12 @@
 
             // E book
             function ebook() {
+
+                let cari = $('#search').val() ? "{{ route('user.ebook.index') }}" : "{{ route('user.ebook.cari') }}" 
+
                 $.ajax({
                     type: "GET",
-                    url: "{{ route('user.ebook.index') }}",
+                    url: "{{ route('user.ebook.cari') }}",
                     data: {
                         cari: $('#search').val()
                     },
@@ -69,6 +72,9 @@
 
                 $.ajax({
                     url: $(this).attr('href'),
+                    data: {
+                        cari: $('#search').val()
+                    },
                     beforeSend: function() {
                         $.LoadingOverlay('show');
                         $("#konten").empty();
