@@ -57,10 +57,28 @@
 
             ebook()
 
-            $('#btn-cari').click(function (e) { 
+            $('#btn-cari').click(function(e) {
                 e.preventDefault();
 
                 ebook()
+            });
+
+            // Pagination
+            $('#konten').on('click', '.pagination a', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('href'),
+                    beforeSend: function() {
+                        $.LoadingOverlay('show');
+                        $("#konten").empty();
+                    },
+                    success: function(response) {
+                        $.LoadingOverlay('hide');
+                        window.scrollTo(0, 0)
+                        $('#konten').append(response.data);
+                    }
+                });
             });
 
         });
