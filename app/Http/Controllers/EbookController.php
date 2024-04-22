@@ -92,6 +92,8 @@ class EbookController extends Controller
 					$request->file('file'),
 					$fileNameFile
 				);
+            }else{
+                $fileNameFile = '';
             }
 
             $cek = array_column(json_decode($request->subject), 'value');
