@@ -51,6 +51,9 @@
                         @if ($e->file)
                             <button type="button" class="btn btn-primary btn-download" data-pdf="{{ $e->file }}"><i
                                     class="fa-solid fa-download"></i> Download</button>
+                        @elseif ($e->link)
+                            <a class="btn btn-primary" href="{{ $e->link }}"><i class="fa-solid fa-download"></i>
+                                Download</a>
                         @endif
                     </div>
                 </div>
@@ -101,7 +104,7 @@
                     beforeSend: function() {
                         $.LoadingOverlay('show');
                     },
-                    success: function (response) {
+                    success: function(response) {
                         $.LoadingOverlay('hide');
                         if (response.meta.status == "success") {
                             $('#data-preview').attr('src', link)
