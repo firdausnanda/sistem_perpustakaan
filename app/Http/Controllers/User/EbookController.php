@@ -52,9 +52,27 @@ class EbookController extends Controller
     {
         try {
 
-            $data = Ebook::with(["counter" => function($q){
-                $q->where('counter.model', Ebook::class);
-            }])->where('judul', 'like', '%'. $request->cari .'%');
+            switch ($request->filter) {
+                case 1:
+                    $data = Ebook::where('judul', 'like', '%' . $request->cari . '%');
+                    break;
+
+                case 2:
+                    $data = Ebook::where('penulis', 'like', '%' . $request->cari . '%');
+                    break;
+
+                case 3:
+                    $data = Ebook::withAnyTags($request->cari);
+                    break;
+                
+                default:
+                    $data = '';
+                    break;
+            }
+            
+            // $data = Ebook::with(["counter" => function($q){
+            //     $q->where('counter.model', Ebook::class);
+            // }])->where('judul', 'like', '%'. $request->cari .'%');
 
             $ebook = $data->paginate(10);
 
