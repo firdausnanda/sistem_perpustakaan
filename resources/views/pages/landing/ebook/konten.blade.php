@@ -29,7 +29,7 @@
 <div class="row">
     <div class="col">
 
-        @if ($ebook->count() > 0)
+        @if ($ebook && $ebook->count() > 0)
             {{ $ebook->onEachSide(1)->links('pagination::bootstrap-5') }}
         @endif
     </div>

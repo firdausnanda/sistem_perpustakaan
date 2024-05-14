@@ -62,26 +62,27 @@ class EbookController extends Controller
                     break;
 
                 case 3:
-                    $data = Ebook::withAnyTags($request->cari);
+                    $data = $request->cari ? Ebook::withAnyTags($request->cari) : '';
                     break;
                 
                 default:
                     $data = '';
                     break;
             }
-            
+
             // $data = Ebook::with(["counter" => function($q){
             //     $q->where('counter.model', Ebook::class);
             // }])->where('judul', 'like', '%'. $request->cari .'%');
-
-            $ebook = $data->paginate(10);
+            
+            $ebook = $data ? $data->paginate(10) : [];
 
             $render = View::make('pages.landing.ebook.konten', compact('ebook'))->render();
 
             return ResponseFormatter::success($render, 'data berhasil diambilll');
             
         } catch (\Exception $e) {
-            Log::error($e, 'Server Error');
+            Log::error($e->getMessage());
+            return ResponseFormatter::error($e->getMessage(), 'Kesalahan Server!');
         }
     }
 }
