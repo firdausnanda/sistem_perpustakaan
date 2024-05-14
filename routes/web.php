@@ -27,6 +27,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 
+// Ebook
+Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {
+    Route::get('', [UserEbookController::class, 'index'])->name('index');
+    Route::get('/cari', [UserEbookController::class, 'cari'])->name('cari');
+    Route::get('/download', [UserEbookController::class, 'download'])->name('download');
+    Route::get('/{id}', [UserEbookController::class, 'detail'])->name('detail');
+});
+
 Auth::routes([
     'register' => false, 
     'reset' => false, 
