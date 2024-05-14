@@ -81,7 +81,8 @@
                 $.ajax({
                     url: $(this).attr('href'),
                     data: {
-                        cari: $('#search').val()
+                        cari: $('#search').val(),
+                        filter: $('#filter').val()
                     },
                     beforeSend: function() {
                         $.LoadingOverlay('show');
