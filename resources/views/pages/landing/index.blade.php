@@ -63,7 +63,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                         <div>
-                            <h4 class="title"><a href="{{ route('login') }}" class="stretched-link">E-Journal</a></h4>
+                            <h4 class="title"><a href="{{ route('user.jurnal.index') }}" class="stretched-link">E-Journal</a></h4>
                             <p class="description">Jurnal elektronik yang dapat diakses secara online melalui internet</p>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="service-item d-flex">
                         <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                         <div>
-                            <h4 class="title"><a href="{{ route('login') }}" class="stretched-link">E-Book</a></h4>
+                            <h4 class="title"><a href="{{ route('user.ebook.index') }}" class="stretched-link">E-Book</a></h4>
                             <p class="description">Repository e-book adalah suatu tempat penyimpanan digital yang berisi koleksi buku elektronik atau e-book.</p>
                         </div>
                     </div>

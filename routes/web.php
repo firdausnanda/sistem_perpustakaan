@@ -94,7 +94,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
 });
 
 // Mahasiswa / Dosen Pages
-Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['role:mahasiswa|dosen']], function () {
+Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
 
     // Dashboard
     Route::get('', [UserDashboardController::class, 'index'])->name('index');
