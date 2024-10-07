@@ -43,7 +43,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+<body class="starter-page-page" data-bs-spy="scroll" data-bs-target="#navmenu">
 
   @include('layouts.landing.header')
 

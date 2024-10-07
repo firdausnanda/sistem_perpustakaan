@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
+Route::get('/sejarah', [LandingController::class, 'sejarah'])->name('landing.sejarah');
+Route::get('/visi-misi', [LandingController::class, 'visimisi'])->name('landing.visimisi');
+Route::get('/tugas-fungsi', [LandingController::class, 'tugas'])->name('landing.tugas');
 
 // Ebook
 Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {

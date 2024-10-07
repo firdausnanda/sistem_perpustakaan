@@ -13,9 +13,9 @@
                   <li class="dropdown"><a href="#"><span>Profile</span> <i
                               class="bi bi-chevron-down toggle-dropdown"></i></a>
                       <ul>
-                          <li><a href="#">Sejarah</a></li>
-                          <li><a href="#">Visi dan Misi</a></li>
-                          <li><a href="#">Tugas dan Fungsi</a></li>
+                          <li><a href="{{ route('landing.sejarah') }}">Sejarah</a></li>
+                          <li><a href="{{ route('landing.visimisi') }}">Visi dan Misi</a></li>
+                          <li><a href="{{ route('landing.tugas') }}">Tugas dan Fungsi</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Jaminan Mutu</span> <i
@@ -33,8 +33,8 @@
                           <li><a href="#">Tata Cara Peminjaman dan Pengembalian</a></li>
                       </ul>
                   </li>
-                  <li><a href="index.html#features">Fasilitas</a></li>
-                  <li><a href="index.html#contact">Kontak</a></li>
+                  <li><a href="#">Fasilitas</a></li>
+                  <li><a href="#">Kontak</a></li>
               </ul>
               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
