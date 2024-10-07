@@ -8,7 +8,9 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-xl-center gy-5">
 
-                <h3 class="mt-0 text-secondary">E-Book</h3>
+                <div class="section-title">
+                    <h2 class="mt-0">E-Book</h2>
+                </div>
 
                 <div class="row mt-4 g-3">
                     <div class="col-md-1">

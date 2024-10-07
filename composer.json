@@ -11,12 +11,15 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.4",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "masbug/flysystem-google-drive-ext": "^2.3",
         "opcodesio/log-viewer": "^3.1",
         "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-permission": "^6.3",
         "spatie/laravel-tags": "^4.5"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.14",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
@@ -32,7 +35,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/Helpers/ResponseFormatter.php"
+            "app/Helpers/ResponseFormatter.php",
+            "app/Helpers/Gdrive.php"
         ]
     },
     "autoload-dev": {

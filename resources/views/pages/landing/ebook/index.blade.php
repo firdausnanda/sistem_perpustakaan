@@ -1,14 +1,16 @@
 @extends('layouts.landing.main')
 
 @section('content')
-    <section class="about" style="height: 91px; background-color: #e84545"></section>
+    <section class="about" style="height: 91px"></section>
 
     <section class="about" style="min-height: 550px; background-color: white">
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row align-items-xl-center gy-5">
 
-                <h1 class="mt-0">E-Book</h1>
+                <div class="section-title">
+                    <h2 class="mt-0">E-Book</h2>
+                </div>
 
                 <div class="row mt-3">
                     <div class="col-lg-4">
@@ -23,7 +25,7 @@
                         </select>
                     </div>
                     <div class="col-lg-2">
-                        <button class="btn btn-outline-danger" type="button" id="btn-cari"><i
+                        <button class="btn btn-outline-primary" type="button" id="btn-cari"><i
                                 class="fa fa-search me-2"></i>Pencarian</button>
                     </div>
                 </div>
