@@ -35,4 +35,9 @@ class LandingController extends Controller
     {
         return view('pages.landing.pedoman.index');
     }
+    
+    public function fasilitas(Request $request) 
+    {
+        return view('pages.landing.fasilitas.index');
+    }
 }
