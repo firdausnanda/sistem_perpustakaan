@@ -28,8 +28,8 @@
                   <li class="dropdown"><a href="#"><span>Informasi</span> <i
                               class="bi bi-chevron-down toggle-dropdown"></i></a>
                       <ul>
-                          <li><a href="#">Peraturan Perpustakaan</a></li>
-                          <li><a href="#">Format Pengumpulan Tugas Akhir</a></li>
+                          <li><a href="{{ route('landing.informasi.peraturan') }}">Peraturan Perpustakaan</a></li>
+                          <li><a href="{{ route('landing.informasi.pengumpulan-ta') }}">Format Pengumpulan Tugas Akhir</a></li>
                           <li><a href="#">Tata Cara Peminjaman dan Pengembalian</a></li>
                       </ul>
                   </li>

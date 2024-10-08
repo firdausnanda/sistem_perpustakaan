@@ -32,6 +32,8 @@ Route::get('/tugas-fungsi', [LandingController::class, 'tugas'])->name('landing.
 Route::get('/renop', [LandingController::class, 'renop'])->name('landing.renop');
 Route::get('/pedoman', [LandingController::class, 'pedoman'])->name('landing.pedoman');
 Route::get('/fasilitas', [LandingController::class, 'fasilitas'])->name('landing.fasilitas');
+Route::get('/informasi/peraturan', [LandingController::class, 'peraturan'])->name('landing.informasi.peraturan');
+Route::get('/informasi/pengumpulan-ta', [LandingController::class, 'pengumpulan_ta'])->name('landing.informasi.pengumpulan-ta');
 
 // Ebook
 Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {
