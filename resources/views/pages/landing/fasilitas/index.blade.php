@@ -23,10 +23,10 @@
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up">
-            <div class="row">
+            <div class="row g-3">
                 <div class="col-lg-3">
                     <div class="card text-dark">
-                        <img class="card-img-top" src="{{ asset('img/fasilitas/1.jpg') }}" />
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/1.jpg') }}" />
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Ruang Perpustakaan</p>
                         </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="card text-dark">
-                        <img class="card-img-top" src="{{ asset('img/fasilitas/2.jpg') }}" />
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/2.jpg') }}" />
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Fasilitas Komputer</p>
                         </div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="card text-dark">
-                        <img class="card-img-top" src="{{ asset('img/fasilitas/3.jpg') }}" />
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/3.jpg') }}" />
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Ruang Baca</p>
                         </div>
@@ -50,9 +50,25 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="card text-dark">
-                        <img class="card-img-top" src="{{ asset('img/fasilitas/4.jpg') }}" />
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/5.jpg') }}" />
+                        <div class="card-body">
+                            <p class="card-text fw-bold text-center">Ruang Baca</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card text-dark">
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/4.jpg') }}" />
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Tempat Buku Selesai Baca</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card text-dark">
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/6.jpg') }}" />
+                        <div class="card-body">
+                            <p class="card-text fw-bold text-center">Meja Sirkulasi</p>
                         </div>
                     </div>
                 </div>
