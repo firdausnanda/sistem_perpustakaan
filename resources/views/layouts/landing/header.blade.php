@@ -22,7 +22,7 @@
                               class="bi bi-chevron-down toggle-dropdown"></i></a>
                       <ul>
                           <li><a href="{{ route('landing.renop') }}">Rencana Operasional</a></li>
-                          <li><a href="#">Pedoman Perpustakaan</a></li>
+                          <li><a href="{{ route('landing.pedoman') }}">Pedoman Perpustakaan</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Informasi</span> <i
@@ -34,7 +34,7 @@
                       </ul>
                   </li>
                   <li><a href="#">Fasilitas</a></li>
-                  <li><a href="#">Kontak</a></li>
+                  <li><a href="{{ route('landing.index') }}#contact">Kontak</a></li>
               </ul>
               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
