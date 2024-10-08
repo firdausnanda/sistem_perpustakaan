@@ -55,7 +55,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-                                <i class="bi bi-box-seam"></i>
+                                <i class="bi bi-wifi"></i>
                                 <div>
                                     <h4 class="d-none d-lg-block">Fasilitas Wifi</h4>
                                     <p>
@@ -67,7 +67,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
-                                <i class="bi bi-brightness-high"></i>
+                                <i class="bi bi-pc-display"></i>
                                 <div>
                                     <h4 class="d-none d-lg-block">Fasilitas Komputer</h4>
                                     <p>
@@ -291,7 +291,7 @@
                                         href="http://repository.itsk-soepraoen.ac.id/">repository.itsk-soepraoen.ac.id</a>
                                     atau klik menu
                                     repository diatas. Akses login hanya untuk admin. Jika sobat membutuhkan file BAB II/
-                                    BAB III/ File terkunci KTI/skripsi silahkan copy link dan kirim ke petugas memlalui WA
+                                    BAB III/ File terkunci KTI/skripsi silahkan copy link dan kirim ke petugas melalui WA
                                     yang tertera disitus web dan media sosial perpustakaan.
                                 </p>
                             </div>
