@@ -72,6 +72,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="card text-dark">
+                        <img style="max-height: 171.29px;" class="card-img-top" src="{{ asset('img/fasilitas/7.jpg') }}" />
+                        <div class="card-body">
+                            <p class="card-text fw-bold text-center">Koleksi Buku</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

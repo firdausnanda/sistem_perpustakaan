@@ -40,4 +40,14 @@ class LandingController extends Controller
     {
         return view('pages.landing.fasilitas.index');
     }
+
+    public function peraturan(Request $request) 
+    {
+        return view('pages.landing.peraturan.index');
+    }
+
+    public function pengumpulan_ta(Request $request) 
+    {
+        return view('pages.landing.pengumpulan-ta.index');
+    }
 }
