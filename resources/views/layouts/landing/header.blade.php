@@ -33,7 +33,7 @@
                           <li><a href="#">Tata Cara Peminjaman dan Pengembalian</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Fasilitas</a></li>
+                  <li><a href="{{ route('landing.fasilitas') }}">Fasilitas</a></li>
                   <li><a href="{{ route('landing.index') }}#contact">Kontak</a></li>
               </ul>
               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
