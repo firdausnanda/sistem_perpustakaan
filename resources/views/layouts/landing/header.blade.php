@@ -30,7 +30,7 @@
                       <ul>
                           <li><a href="{{ route('landing.informasi.peraturan') }}">Peraturan Perpustakaan</a></li>
                           <li><a href="{{ route('landing.informasi.pengumpulan-ta') }}">Format Pengumpulan Tugas Akhir</a></li>
-                          <li><a href="#">Tata Cara Peminjaman dan Pengembalian</a></li>
+                          <li><a href="{{ route('landing.informasi.tata-peminjaman') }}">Tata Cara Peminjaman dan Pengembalian</a></li>
                       </ul>
                   </li>
                   <li><a href="{{ route('landing.fasilitas') }}">Fasilitas</a></li>
