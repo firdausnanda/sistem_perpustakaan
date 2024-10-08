@@ -13,7 +13,7 @@
                 </p>
                 <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                     <a href="#layanan" class="btn-get-started">Get Started</a>
-                    <a href="{{ asset('img/video/profil.mp4') }}"
+                    <a href="{{ asset('img/video/profile.mp4') }}"
                         class="glightbox btn-watch-video d-flex align-items-center"><i
                             class="bi bi-play-circle"></i><span>Lihat
                             Video</span></a>
