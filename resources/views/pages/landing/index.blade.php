@@ -287,12 +287,13 @@
                         <div class="faq-item">
                             <h3>Bagaimana cara akses repository?</h3>
                             <div class="faq-content">
-                                <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet
-                                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                                    pretium. Est pellentesque
-                                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                                    tincidunt dui.</p>
+                                <p>Sobat pustaka dapat mengunjungi laman <a
+                                        href="http://repository.itsk-soepraoen.ac.id/">repository.itsk-soepraoen.ac.id</a>
+                                    atau klik menu
+                                    repository diatas. Akses login hanya untuk admin. Jika sobat membutuhkan file BAB II/
+                                    BAB III/ File terkunci KTI/skripsi silahkan copy link dan kirim ke petugas memlalui WA
+                                    yang tertera disitus web dan media sosial perpustakaan.
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -300,13 +301,15 @@
                         <div class="faq-item">
                             <h3>Bagaimana mencari buku di OPAC?</h3>
                             <div class="faq-content">
-                                <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                    Faucibus pulvinar
-                                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                                    tellus pellentesque
-                                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
-                                    elementum eu facilisis
-                                    sed odio morbi quis</p>
+                                <p>Sobat pustaka dapat mengunjungi laman <a
+                                        href="https://katalog.itsk-soepraoen.ac.id/">katalog.itsk-soepraoen.ac.id</a> atau
+                                    klik menu OPAC
+                                    diatas, Akses login hanya untuk admin. Sobat pustaka dapat memanfaatkan OPAC untuk
+                                    mencari detail tentang ketersedian buku di Rak perpustakaan. Sobat hanya perlu memasukan
+                                    kata kunci pada kolom pencarian yang tersedia. Contoh: Kendall’s muscles, Nomor Panggil
+                                    = 616.7 CON k-1,artinya buku ada pada rak = 616, inisial penulis = CON, K = awalan judul
+                                    buku, 1 pada K-1 = buku ke 1 dari judul teresebut.
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -314,12 +317,10 @@
                         <div class="faq-item">
                             <h3>Syarat bebas tanggungan untuk KTI?</h3>
                             <div class="faq-content">
-                                <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet
-                                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                                    pretium. Est pellentesque
-                                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                                    tincidunt dui.</p>
+                                <p>Sobat pustaka wajib sudah mengumpulkan KTI/Skripsi sesuai dengan ketentuan, Tidak
+                                    memiliki pinjaman atau telah mengembalikan buku yang dipinjam dan sudah membayar denda,
+                                    jika terlambat mengembalikan/ mengganti buku yang dihilangkan.
+                                </p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -327,11 +328,7 @@
                         <div class="faq-item">
                             <h3>Bagaimana format pengumpulan tugas akhir?</h3>
                             <div class="faq-content">
-                                <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse
-                                    in est ante in.
-                                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
-                                    adipiscing bibendum est.
-                                    Purus gravida quis blandit turpis cursus in</p>
+                                <p>Sobat pustaka dapat mengakses pada menu informasi di web perpustakaan.</p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
