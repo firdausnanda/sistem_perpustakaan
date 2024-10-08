@@ -7,7 +7,7 @@
                       <span class="sitename">Perpustakaan Digital</span>
                   </a>
                   <div class="footer-contact pt-3">
-                      <p>
+                      <p class="lh-lg text-secondary">
                           Perpustakaan ITSK RS dr. Soepraoen Malang merupakan unit pelaksana teknis yang berada di
                           bawah Wakil
                           Rektor I ITSK RS dr. Soepraoen Malang. Perpustakaan ITSK RS dr. Soepraoen berdiri mengikuti
@@ -27,20 +27,23 @@
               </div>
 
               <div class="col-lg-2 col-md-3 footer-links">
-                  <h4>Menu Penting</h4>
+                  <h4>Layanan Mahasiswa</h4>
                   <ul>
-                      <li><a href="https://itsk-soepraoen.ac.id/" target="_blank">ITSK RS dr. Soepraoen</a></li>
-                      <li><a href="https://neosiakad.itsk-soepraoen.ac.id/login" target="_blank">Sistem Akademik</a>
+                      <li><a href="https://itsk-soepraoen.ac.id/" target="_blank">Website ITSK Soepraoen</a></li>
+                      <li><a href="https://neosiakad.itsk-soepraoen.ac.id/login" target="_blank">SIAKAD ITSK Soepraoen</a>
                       </li>
-                      <li><a href="https://sipenmaru.itsk-soepraoen.ac.id/" target="_blank">PMB ITSK dr.
+                      <li><a href="https://sipenmaru.itsk-soepraoen.ac.id/" target="_blank">Pendaftaran ITSK dr.
                               Soepraoen</a></li>
                   </ul>
               </div>
 
               <div class="col-lg-2 col-md-3 footer-links">
-                  <h4>Program Studi</h4>
+                  <h4>Menu Penting</h4>
                   <ul>
-                      <!-- <li><a href="#">S1 Keperawatan</a></li> -->
+                      <li><a href="{{ route('landing.sejarah') }}">Sejarah</a></li>
+                      <li><a href="{{ route('landing.visimisi') }}">Visi dan Misi</a></li>
+                      <li><a href="{{ route('landing.tugas') }}">Tugas dan Fungsi</a></li>
+                      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeIJ9ssG3mzsJpMmw4KJ9xBsS2E_dcRSOqQS5FsbZ5oBysz7g/viewform">Usul Buku</a></li>
                   </ul>
               </div>
 
