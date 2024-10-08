@@ -315,7 +315,7 @@
                         </div><!-- End Faq item-->
 
                         <div class="faq-item">
-                            <h3>Syarat bebas tanggungan untuk KTI?</h3>
+                            <h3>Syarat bebas tanggungan perpustakaan?</h3>
                             <div class="faq-content">
                                 <p>Sobat pustaka wajib sudah mengumpulkan KTI/Skripsi sesuai dengan ketentuan, Tidak
                                     memiliki pinjaman atau telah mengembalikan buku yang dipinjam dan sudah membayar denda,
