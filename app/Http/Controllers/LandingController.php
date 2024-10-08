@@ -50,4 +50,9 @@ class LandingController extends Controller
     {
         return view('pages.landing.pengumpulan-ta.index');
     }
+
+    public function tata_peminjaman(Request $request) 
+    {
+        return view('pages.landing.tata-peminjaman.index');
+    }
 }
