@@ -25,4 +25,14 @@ class LandingController extends Controller
     {
         return view('pages.landing.tugas.index');
     }
+
+    public function renop(Request $request) 
+    {
+        return view('pages.landing.renop.index');
+    }
+    
+    public function pedoman(Request $request) 
+    {
+        return view('pages.landing.pedoman.index');
+    }
 }

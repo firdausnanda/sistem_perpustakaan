@@ -21,7 +21,7 @@
                   <li class="dropdown"><a href="#"><span>Jaminan Mutu</span> <i
                               class="bi bi-chevron-down toggle-dropdown"></i></a>
                       <ul>
-                          <li><a href="#">Rencana Operasional</a></li>
+                          <li><a href="{{ route('landing.renop') }}">Rencana Operasional</a></li>
                           <li><a href="#">Pedoman Perpustakaan</a></li>
                       </ul>
                   </li>
