@@ -62,10 +62,10 @@
           </div>
       </div>
 
-      <div class="container copyright text-center mt-4 d-none">
+      <div class="container copyright text-center mt-4">
           <p>© <span>Copyright</span> <strong class="px-1 sitename">ITSK RS dr. Soepraoen</strong><span>All Rights
                   Reserved</span></p>
-          <div class="credits">
+          <div class="credits d-none">
               <!-- All the links in the footer should remain intact. -->
               <!-- You can delete the links only if you've purchased the pro version. -->
               <!-- Licensing information: https://bootstrapmade.com/license/ -->
