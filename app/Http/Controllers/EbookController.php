@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Validator;
 
 class EbookController extends Controller
 {
+    public function destroy($id)
+    {
+        try {
+            $ebook = Ebook::find($id);
+            $ebook->delete();
+            return ResponseFormatter::success($ebook, 'Data berhasil dihapus!');
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            return ResponseFormatter::error($e->getMessage(), 'Server Error', 500);
+        }
+    }
+
     public function index(Request $request) 
     {
         if ($request->ajax()) {

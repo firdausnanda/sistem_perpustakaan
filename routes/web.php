@@ -63,6 +63,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['role:admi
         Route::post('/update', [EbookController::class, 'update'])->name('update');
         Route::get('/create', [EbookController::class, 'create'])->name('create');
         Route::get('/{id}', [EbookController::class, 'edit'])->name('edit');
+        Route::delete('/{id}', [EbookController::class, 'destroy'])->name('destroy');
     });
 
     // Jurnal

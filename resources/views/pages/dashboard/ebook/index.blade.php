@@ -79,7 +79,7 @@
                 ajax: {
                     url: "{{ route('admin.ebook.index') }}",
                     type: "GET",
-                    data: function(d){
+                    data: function(d) {
                         d.search = $('#search').val();
                         d.search_by = $('#search_by').val();
                     }
@@ -125,7 +125,8 @@
                         width: '10%',
                         className: 'align-middle text-center',
                         render: function(data, type, row, meta) {
-                            return '<button class="btn btn-warning btn-sm btn-edit"><i class="fa-solid fa-pencil-alt"></i></button>';
+                            return `<button class="btn btn-warning btn-sm btn-edit"><i class="fa-solid fa-pencil-alt"></i></button> 
+                            <button class="btn btn-danger btn-sm btn-delete"><i class="fa-solid fa-trash-alt"></i></button>`;
                         }
                     },
                 ],
@@ -148,8 +149,51 @@
                 location.href = link
             });
 
+            // Delete
+            $('#table-ebook tbody').on('click', '.btn-delete', function(event) {
+                event.preventDefault()
+
+                var data = table.row($(this).parents('tr')).data();
+
+                Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    text: "Data yang sudah dihapus tidak dapat kembali!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, hapus!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "{{ route('admin.ebook.destroy', ':id') }}".replace(':id', data.id),
+                            type: "DELETE",
+                            data: {
+                                _token: "{{ csrf_token() }}"
+                            },
+                            success: function(response) {
+                                Swal.fire({
+                                    title: 'Terhapus!',
+                                    text: 'Data berhasil dihapus.',
+                                    icon: 'success'
+                                });
+                                table.ajax.reload();
+                            },
+                            error: function(xhr) {
+                                Swal.fire({
+                                    title: 'Gagal!',
+                                    text: 'Terjadi kesalahan saat menghapus data.',
+                                    icon: 'error'
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
             // Cari
-            $(".btn-cari").click(function (e) { 
+            $(".btn-cari").click(function(e) {
                 e.preventDefault();
                 table.ajax.reload()
             });
