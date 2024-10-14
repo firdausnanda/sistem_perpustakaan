@@ -16,6 +16,15 @@ class EbookController extends Controller
     {
         try {
             $ebook = Ebook::find($id);
+
+            if ($ebook->gambar) {
+                Storage::delete('public/gambar_buku/' . $ebook->gambar);
+            }
+
+            if ($ebook->file) {
+                Storage::delete('public/file_buku/' . $ebook->file);
+            }
+
             $ebook->delete();
             return ResponseFormatter::success($ebook, 'Data berhasil dihapus!');
         } catch (\Exception $e) {
