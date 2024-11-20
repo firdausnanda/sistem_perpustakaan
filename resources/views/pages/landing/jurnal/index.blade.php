@@ -12,46 +12,89 @@
                     <h2 class="mt-0">E-Journal</h2>
                 </div>
 
-                <div class="row mt-4 g-3">
-                    @foreach ($jurnal as $e)
-                        <div class="col-md-1">
-                            <img src="{{ asset('img/jurnal/pdf.png') }}" style="width: 50px; height: auto;" alt="">
-                        </div>
-                        <div class="col-md-11">
-                            <a class="fw-bold" href="{{ route('user.jurnal.detail', $e->id) }}">
-                                {{ $e->judul }}
-                            </a>
-                            <div>
-                                <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-eye"></i> <span
-                                        class="text-dark fw-bold">{{ $e->counter ? $e->counter->lihat : 0 }}</span></span>
-                                <span class="text-secondary" style="font-size: 13px"><i class="fa-solid fa-download"></i>
-                                    <span
-                                        class="text-dark fw-bold">{{ $e->counter ? $e->counter->download : 0 }}</span></span>
-                            </div>
-
-                            <span class="text-secondary" style="font-size: 13px">Oleh : <span
-                                    class="text-dark fw-bold">{{ $e->penulis }}</span></span>
-                            @if ($e->tahun)
-                                <span class="text-secondary" style="font-size: 13px">Tahun : <span
-                                        class="text-dark fw-bold">{{ $e->tahun }}</span></span>
-                            @endif
-
-                            <p class="text-secondary" style="font-size: 14px">{{ Str::limit($e->abstrak, 320) }}</p>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="row">
-                    <div class="col">
-
-                        @if ($jurnal->count() > 0)
-                            {{ $jurnal->onEachSide(1)->links('pagination::bootstrap-5') }}
-                        @endif
+                <div class="row mt-3">
+                    <div class="col-lg-4">
+                        <input type="text" name="search" id="search" class="form-control"
+                            placeholder="Cari Judul Buku">
+                    </div>
+                    <div class="col-lg-4">
+                        <select name="filter" class="form-select" id="filter">
+                            <option value="1">Judul</option>
+                            <option value="2">Penulis</option>
+                            <option value="3">Subyek</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-outline-primary" type="button" id="btn-cari"><i
+                                class="fa fa-search me-2"></i>Pencarian</button>
                     </div>
                 </div>
+
+                <div id="konten"></div>
 
             </div>
         </div>
 
     </section><!-- End About Section -->
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function() {
+
+            // Jurnal
+            function jurnal() {
+                let cari = $('#search').val() ? "{{ route('jurnal.index') }}" : "{{ route('jurnal.cari') }}"
+
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('jurnal.cari') }}",
+                    data: {
+                        cari: $('#search').val(),
+                        filter: $('#filter').val()
+                    },
+                    dataType: "JSON",
+                    beforeSend: function() {
+                        $.LoadingOverlay('show');
+                        $("#konten").empty();
+                    },
+                    success: function(response) {
+                        $.LoadingOverlay('hide');
+
+                        // Append to Berita
+                        $("#konten").append(response.data);
+                    }
+                });
+            }
+
+            jurnal()
+
+            $('#btn-cari').click(function(e) {
+                jurnal()
+            });
+
+            // Pagination
+            $('#konten').on('click', '.pagination a', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('href'),
+                    data: {
+                        cari: $('#search').val(),
+                        filter: $('#filter').val()
+                    },
+                    beforeSend: function() {
+                        $.LoadingOverlay('show');
+                        $("#konten").empty();
+                    },
+                    success: function(response) {
+                        $.LoadingOverlay('hide');
+                        window.scrollTo(0, 0)
+                        $('#konten').append(response.data);
+                    }
+                });
+            });
+
+        });
+    </script>
 @endsection

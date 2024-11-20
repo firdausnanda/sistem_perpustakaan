@@ -44,6 +44,14 @@ Route::group(['prefix' => 'ebook', 'as' => 'ebook.'], function () {
     Route::get('/{id}', [UserEbookController::class, 'detail'])->name('detail');
 });
 
+// Jurnal
+Route::group(['prefix' => 'jurnal', 'as' => 'jurnal.'], function () {
+    Route::get('', [UserJurnalController::class, 'index'])->name('index');
+    Route::get('/cari', [UserJurnalController::class, 'cari'])->name('cari');
+    Route::get('/download', [UserJurnalController::class, 'download'])->name('download');
+    Route::get('/{id}', [UserJurnalController::class, 'detail'])->name('detail');
+});
+
 Auth::routes([
     'register' => false, 
     'reset' => false, 
@@ -120,6 +128,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
     // Jurnal
     Route::group(['prefix' => 'jurnal', 'as' => 'jurnal.'], function () {
         Route::get('', [UserJurnalController::class, 'index'])->name('index');
+        Route::get('/cari', [UserJurnalController::class, 'cari'])->name('cari');
         Route::get('/download', [UserJurnalController::class, 'download'])->name('download');
         Route::get('/{id}', [UserJurnalController::class, 'detail'])->name('detail');
     });
